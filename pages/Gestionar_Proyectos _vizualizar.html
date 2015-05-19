@@ -39,24 +39,7 @@
 
 
 
-    <!--confirmation dialog-->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal-label" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModal-label">Are you sure?</h4>
-                </div>
-                <div class="modal-body">
-                    <p class="text-center text-danger">¿Estas seguro de querer eliminar este proyecto?</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-pinterest btn-default " data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-pinterest btn-primary btn-danger" >Delete</button>
-                </div>
-            </div>
-        </div>
-    </div>
+   
 
     <div id="wrapper">
 
@@ -108,7 +91,7 @@
                             </div>
                             <!-- /input-group -->
                         </li>
-                      
+                       
                         <li class="active">
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
@@ -161,102 +144,54 @@
 
                 <div class="row">
                     <div class="col-md-4 col-lg-12">
-                        <h1 class="page-header">Agregar Examen</h1>
+                        <h1 class="page-header">Problema [nombre del problema]</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- /.row -->
 
-               
+				<div class="row">
 
+				<div class="form-group col-md-4 text-left">
 
-
-                <div class="tab-content" data-target="#tabGestionMateria"> <!--empieza -->
+                                <button class="btn  btn-outline btn-primary" id="delete" onclick="window.open('EnviarProyecto-josue.html', '_self', 'false')">Enviar Solución</button>
+                            
+                </div>
+                    <div class="row text-right col-md-6">
+                        <div class="btn-group">
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-sm btn-circle btn-pinterest btn-success col-md-offset-2" id="return" onclick="window.open('listar_proyecto.html', '_self', 'false')">
+                                    <i class="fa fa-arrow-circle-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+                    </div>
                     
-                    <div class=" active tab-pane fade in" id="registrarMateria">
-                        
-                         <div class="row">
-                            <div class="col-md-6 col-lg-9">
-                                <div class="row text-right">
-                                    <div class="btn-group">
-                                        <div class="btn-group" role="group">
-                                            <button class="btn btn-sm btn-circle btn-pinterest btn-success col-md-offset-2" id="return" onclick="window.open('Gestionar_Examenes.html', '_self', 'false')">
-                                                <i class="fa fa-arrow-circle-left"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="panel panel-primary">
-                                    <div class="panel-heading">Proporcione los datos del examen</div>
-
-
-                                    <div class="panel-body">
-                                        <form role="form">
-
-                                            <div class="form-group">
-                                                <label class="control-label" for="nombreExamen">Nombre del examen</label>
-                                                <input type="text" class="form-control" id="nombreExamen" placeholder="examen" required>
-                                            </div>
-
-                                             <div class=" form-group">
-                                            <label for="unidades" class="control-label">Unidad</label>
-                                            <select class="form-control" id="unidades" placeholder="Selecciona Unidad">
-                                                <option id="unidad1">Unidad 1</option>
-                                                <option id="unidadn">Unidad 2</option>
-                                                <option id="unidadn">Unidad 3</option>
-                                                <option id="unidadn">Unidad 4</option>
-                                                <option id="unidadn">Unidad 5</option>
-                                                <option id="unidadn">Unidad 6</option>
-                                                <option id="unidadn">Unidad 7</option>
-                                                <option id="unidadn">Unidad 8</option>
-                                            </select>
-                                        </div>
-
-                                         <div class="form-group">
-                                            <label>Ruta del archivo</label>
-
-                                            <input type="file">
-                                         </div>
-                                         <div class="form-group">
-                                         </div>
-
-
-                                             <div class="form-group">
-                                                <label class="control-label" 
-                                                for="fecha">Fecha</label>
-                                            <input type="date" name="fecha">
-     
-                                             </div>
-                                             <div class="form-group">
-                                                <label class="control-label" 
-                                                for="fecha">Hora de inicio</label>
-                                              <input type="time" name="hora">
-                                                <label class="control-label" 
-                                                for="fecha">Hora de terminación</label>
-                                              <input type="time" name="hora">
-                                            </div>
-
-
-                                            <div class=" form-group col-md-offset-3" align ="right">
-                                                <button type="submit" id="btn-cancel-registrarMateria" class="btn btn-outline btn-danger" align ="right">Cancelar</button>
-                                                <button type="submit" id="btn-registrarMateria" class="btn btn-outline btn-primary">Registrar</button>
-                                            </div>
-
-                                        </form>
-                                    </div> 
-                                </div>
-                                <!--</div> --> 
-
-                                    
-<BR>
-
-                             
-
+				 
                 
 
-                    
-                </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-lg-9">
+                                
+                                <h2></h2>
+                                <div id="portapdf"> 
+                                 <center>
+                                 <object data="assets/ejemplo.pdf" type="application/pdf" width="800px" height="900px">
+                                 </object> </center>
+                                </div> 
+                                <h2></h2>
+
+                            </div>
+                        </div> 
+						
+						
+						
+
+
+
+                
                 
 
 
@@ -266,7 +201,7 @@
         </div>
  <!-- /#page-wrapper -->
 
-    </div>
+ 
 
 
 
