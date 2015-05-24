@@ -1,3 +1,18 @@
+<?php
+session_start();
+                    
+                    if (!empty($_POST)){
+                         $ruta='../_Proyectos/'.$_POST['visualizar'].'.pdf';
+                         $nombre=$_POST['nombreProblema'];
+                    }
+                                        
+                    else{
+                        header('Location:../pages/listar_proyecto.php');
+                        exit();
+                        }
+                ?>
+
+
 ﻿<!DOCTYPE html>
 <html lang="en">
 
@@ -102,7 +117,7 @@
                 <a href="EnviarProyecto-josue.html">Enviar proyecto -josusue</a>
             </li>-->
                                 <li>
-                                    <a href="listar_proyecto.html">Proyectos</a>
+                                    <a href="listar_proyecto.php">Proyectos</a>
                                 </li>
 
                                 <li>
@@ -131,11 +146,15 @@
 
  <!-- Page Content -->
         <div id="page-wrapper">
+
+               
+
+
             <div class="container-fluid">
 
                 <div class="row">
                     <div class="col-md-12 col-lg-12">
-                        <h1 class="page-header">Problema [nombre del problema]</h1>
+                        <h1 class="page-header"><?php echo $nombre; ?></h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
@@ -151,7 +170,7 @@
                     <div class="row text-right col-md-6">
                         <div class="btn-group">
                             <div class="btn-group" role="group">
-                                <button class="btn btn-sm btn-circle btn-pinterest btn-success col-md-offset-2" id="return" onclick="window.open('listar_proyecto.html', '_self', 'false')">
+                                <button class="btn btn-sm btn-circle btn-pinterest btn-success col-md-offset-2" id="return" onclick="window.open('listar_proyecto.php', '_self', 'false')">
                                     <i class="fa fa-arrow-circle-left"></i>
                                 </button>
                             </div>
@@ -169,7 +188,7 @@
                                 <h2></h2>
                                 <div id="portapdf"> 
                                  <center>
-                                 <object data="assets/ejemplo.pdf" type="application/pdf" width="800px" height="900px">
+                                 <object data="<?php echo $ruta; ?>" type="application/pdf" width="800px" height="900px">
                                  </object> </center>
                                 </div> 
                                 <h2></h2>
