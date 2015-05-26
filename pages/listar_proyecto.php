@@ -48,7 +48,11 @@ if (isset($_SESSION['visualizar']) && $inicio) {
 
     <body>
 
-        <!--confirmation dialog-->
+        <!--?php
+        if (isset($_SESSION['delete'])) {
+            if ($_SESSION['delete'] == true) {
+
+                echo ' <!--confirmation dialog-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal-label" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -60,24 +64,34 @@ if (isset($_SESSION['visualizar']) && $inicio) {
                         <p class="text-center text-danger">¿Estas seguro de querer eliminar este proyecto?</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-pinterest btn-default " data-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-pinterest btn-primary btn-danger" data-dismiss="modal" ><a href="#" onclick="$('.alert').show()">Delete</a></button>
+                    <form name="contact" class="contact">
+                        <input type="hidden" id="idTo" name="idTo" value="sinValor"/>
+                    </form>
+                        <button type="button" class="btn btn-pinterest btn-default "  name="candel" value="none"
+                                data-dismiss="modal">Cancelar</button>
+                        
+                        <button type="submit" id="delete_proyecto" 
+                                class="btn btn-pinterest btn-primary btn-danger" 
+                                data-dismiss="modal" >Delete</button>
+                        <!--onclick="$(\'.alert\').show()"-->
+                    
                     </div>
                 </div>
             </div>
         </div>
+        <!--';        }       }        ?>
+
 
         <!--alert-->
 
-        <div class="alert alert-success alert-dismissable" style="display: none">
-            <a class="close" onclick="$('.alert').hide()">×</a>
-            <strong>Eliminado!</strong> El registro ha sido eliminado.
+        <div id="alerta" class="alert alert-success alert-dismissable" style="display: none">
+            <a class="close" onclick="$('.alert').hide();
+                window.open('listar_proyecto.php','_self','false');">×</a>
+            <strong>Eliminación</strong>
+            <p id="menssage"></p>
         </div>
-
-
-
-
-
+             
+        
         <div id="wrapper">
 
             <!-- Navigation -->
@@ -201,24 +215,24 @@ if (isset($_SESSION['visualizar']) && $inicio) {
                                         </thead>
                                         <tbody>
 
-                                            <?php
-                                            include '../sql/conexion.php';
-                                            try {
-                                                $mysqli = Conectarse();
+<?php
+include '../sql/conexion.php';
+try {
+    $mysqli = Conectarse();
 
-                                                $query = 'SELECT idproyecto,rutaProyecto,complejidad,nombreProyecto FROM proyecto WHERE estado='
-                                                        . "'ACTIVO';";
+    $query = 'SELECT idproyecto,rutaProyecto,complejidad,nombreProyecto FROM proyecto WHERE estado='
+            . "'ACTIVO';";
 
-                                                $resultado = $mysqli->query($query);
+    $resultado = $mysqli->query($query);
 
-                                                if (!$resultado) {
-                                                    printf("Error: %s\n", $mysqli->error);
-                                                }
+    if (!$resultado) {
+        printf("Error: %s\n", $mysqli->error);
+    }
 
-                                                while ($row = mysqli_fetch_array($resultado, MYSQLI_BOTH)) {
+    while ($row = mysqli_fetch_array($resultado, MYSQLI_BOTH)) {
 
-                                                    if (isset($row['idproyecto'])) {
-                                                        ?>   
+        if (isset($row['idproyecto'])) {
+            ?>   
 
 
                                                         <tr class="odd gradeX">
@@ -253,28 +267,29 @@ if (isset($_SESSION['visualizar']) && $inicio) {
                                                                         </div>
                                                                         <div class="row col-md-4 form-inline">
 
-                                                                            <div class="btn-group" role="group">
-                                                                                <button class="btn btn-sm btn-danger" type="submit" value="<?php echo $row['idproyecto']; ?>" name="delete" data-toggle="modal" data-target="#myModal">
-                                                                                    <i class="glyphicon glyphicon-remove"></i>
-                                                                                </button>
-                                                                                                                                                                                                                                              
-                                                                            </div>
+                                                                                        <!--<form class="form-inline" method="POST" action="php echo $_SERVER['PHP_SELF']; "><div class="btn-group" role="group">-->
+                                                                            <button class="btn btn-sm btn-danger"  value="<?php echo ' '.$row['idproyecto']; ?>" id="btn_delete" name="elimiar_pro" data-toggle="modal"  data-target="#myModal">
+                                                                                <i class="glyphicon glyphicon-remove"></i>
+                                                                            </button>
 
                                                                         </div>
+                                                                        <!--</form>-->
 
                                                                     </div>
+
+                                                                </div>
                                                                 </div>
                                                             </td>
 
                                                         </tr>
 
-                                                    <?php
-                                                    } else {
-                                                        echo $query;
-                                                    }
-                                                }
-                                            } catch (RuntimeException $e) {
-                                                echo '<div class="col-lg-4">
+            <?php
+        } else {
+            echo $query;
+        }
+    }
+} catch (RuntimeException $e) {
+    echo '<div class="col-lg-4">
                     <div class="panel panel-danger">
                         <div class="panel-heading">
                             Error al conectar a la base de datos 
@@ -287,14 +302,14 @@ if (isset($_SESSION['visualizar']) && $inicio) {
                         </div>
                     </div>
                 </div>';
-                                            }
-                                            
-                                            
-                                            if(@$_POST['delete']){
-                                                header('Location:../pages/Gestionar_Proyectos_visualizar.php');                                               
-                                            }
-                                            
-                                            ?>
+}
+
+
+if (@$_POST['delete']) {
+    // header('Location:../pages/Gestionar_Proyectos_visualizar.php'); 
+    $_SESSION['delete'] = TRUE;
+}
+?>
 
                                         </tbody>
                                     </table>
@@ -335,12 +350,43 @@ if (isset($_SESSION['visualizar']) && $inicio) {
 
         <!-- Page-Level Demo Scripts - Tables - Use for reference -->
         <script>
-                                                                                    $(document).ready(function () {
-                                                                                        $('#dataTables-example').DataTable({
-                                                                                            responsive: true
-                                                                                        });
-                                                                                    });
+            $(document).ready(function () {
+                $('#dataTables-example').DataTable({
+                    responsive: true
+                });
+            });
         </script>
+        
+        <script>
+            $(document).ready(function () {
+                $("button#delete_proyecto").click(function () {
+                    $.ajax({
+                        type: "POST",
+                        url: "../sql/eliminar_proyecto.php", //process to mail
+                        data: $('form.contact').serialize(),
+                        success: function (msg) {
+                            $("#menssage").html(msg);
+                            $("#myModal").modal('hide'); //hide popup
+                            //$('#menssage').attr("class"," alert-success alert-dismissable ");
+                            $('.alert').show();
+                        },
+                        error: function () {
+                             $("#menssage").html("No se pudo eliminar el registro seleccionado");
+                             $('#menssage').attr("class"," alert-danger ");
+                              $('.alert').show();
+                        }
+                    });
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function () {
+            $("#btn_delete").click(function () {
+                $('#idTo').val($("#btn_delete").attr("value"));                               
+            });});
+        </script>
+        
+       
 
     </body>
 </html>
