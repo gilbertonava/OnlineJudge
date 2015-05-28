@@ -98,7 +98,7 @@ if (isset($_FILES["rutaProyecto"])) {
                     echo '<br><h1>Unable to insert</h1><br />';
                     session_start();
                     $_SESSION['proyectoActualizado'] = 'false';
-                    header('Location:../pages/listar_proyecto.php');
+                    header('Location:../pages/problemas/listar_proyecto.php');
                 } else {
                     echo '<br><h1>Insert successfully</h1> <br />';
 
@@ -110,7 +110,7 @@ if (isset($_FILES["rutaProyecto"])) {
                      */
                     session_start();
                     $_SESSION['proyectoActualizado'] = 'true';
-                    header('Location:../pages/listar_proyecto.php');
+                    header('Location:../pages/problemas/listar_proyecto.php');
                     //}
                 }
             }
@@ -141,7 +141,7 @@ if (isset($_FILES["rutaProyecto"])) {
                     echo '<br><h1>Unable to insert</h1><br />';
                     session_start();
                     $_SESSION['proyectoActualizado'] = 'false';
-                    header('Location:../pages/listar_proyecto.php');
+                    header('Location:../pages/problemas/listar_proyecto.php');
                 } else {
                     echo '<br><h1>Insert successfully</h1> <br />';
 
@@ -153,7 +153,7 @@ if (isset($_FILES["rutaProyecto"])) {
                      */
                     session_start();
                     $_SESSION['proyectoActualizado'] = 'true';
-                    header('Location:../pages/listar_proyecto.php');
+                    header('Location:../pages/problemas/listar_proyecto.php');
                     //}
                 }
             }
@@ -162,7 +162,7 @@ if (isset($_FILES["rutaProyecto"])) {
 } else {
     session_start();
     $_SESSION['error_file'] = 'true';
-    header('Location:../pages/listar_proyecto.php');
+    header('Location:../pages/problemas/listar_proyecto.php');
 }
 ?>
 

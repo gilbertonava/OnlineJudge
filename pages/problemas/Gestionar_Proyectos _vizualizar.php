@@ -1,3 +1,18 @@
+<?php
+session_start();
+                    
+                    if (!empty($_POST)){
+                         $ruta='../../_Proyectos/'.$_POST['visualizar'].'.pdf';
+                         $nombre=$_POST['nombreProblema'];
+                    }
+                                        
+                    else{
+                        header('Location:../../pages/listar_proyecto.php');
+                        exit();
+                        }
+                ?>
+
+
 ﻿<!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +24,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Online Judge ITSMANTE </title>
+    <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
@@ -17,14 +32,8 @@
     <!-- MetisMenu CSS -->
     <link href="../../static/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
 
-    <!-- Timeline CSS -->
-    <!--<link href="../../dist/css/timeline.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="../../static/css/sb-admin-2.css" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <!--<link href="../../bower_components/morrisjs/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../../static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -39,7 +48,6 @@
 </head>
 
 <body>
-
     <div id="wrapper">
 
         <!-- Navigation -->
@@ -51,7 +59,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../pages/index.html">Online Judge ITSMANTE</a>
+                <a class="navbar-brand" href="../usuarios/index.html"> Juez en Linea ITSMante </a>
             </div>
             <!-- /.navbar-header -->
 
@@ -67,7 +75,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="../usuarios/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -79,22 +87,11 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                        <li class="sidebar-search">
-                            <div class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                            </div>
-                            <!-- /input-group -->
-                        </li>
-                        
-                        <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i>Panel de Control<span class="fa arrow"></span></a>
+                                              
+                        <li class="active">
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Panel de Control<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                <li>
+                               <li>
                                     <a href="../problemas/listar_proyecto.php">Proyectos</a>
                                 </li>
 
@@ -122,31 +119,79 @@
             <!-- /.navbar-static-side -->
         </nav>
 
+ <!-- Page Content -->
         <div id="page-wrapper">
 
-            <!--:) agrega tus inc#es componentes aki!!!!!!!!!-->
-
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Welcome!</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-            <div class="row">
-
                
-               <p class="text-center">some content here</p>
+
+
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-md-12 col-lg-12">
+                        <h1 class="page-header"><?php echo $nombre; ?></h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+
+				<div class="row">
+
+				<div class="form-group col-md-4 text-left">
+
+                                <button class="btn  btn-outline btn-primary" id="delete" 
+                                        onclick="window.open('EnviarProyecto-josue.html', '_self', 'false')">Enviar Solución</button>
+                            
+                </div>
+                    <div class="row text-right col-md-6">
+                        <div class="btn-group">
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-sm btn-circle btn-pinterest btn-success col-md-offset-2" 
+                                        id="return" onclick="window.open('listar_proyecto.php', '_self', 'false')">
+                                    <i class="fa fa-arrow-circle-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+                    </div>
+                    
+				 
+                
+
+
+                        <div class="row">
+                            <div class="col-md-6 col-lg-9">
+                                
+                                <h2></h2>
+                                <div id="portapdf"> 
+                                 <center>
+                                 <object data="<?php echo $ruta; ?>" type="application/pdf" width="800px" height="900px">
+                                 </object> </center>
+                                </div> 
+                                <h2></h2>
+
+                            </div>
+                        </div> 
+						
+						
+						
+
+
+
+                
+                
+
+
+
             </div>
-
-
-            <!--:) No agregeges tus inc#es componentes  DESPUES de aki!!!!!!!!!-->
-           
+            <!-- /.container-fluid -->
         </div>
-        <!-- /#page-wrapper -->
+ <!-- /#page-wrapper -->
 
-    </div>
+ 
+
+
+
     <!-- /#wrapper -->
 
     <!-- jQuery -->
@@ -158,14 +203,32 @@
     <!-- Metis Menu Plugin JavaScript -->
     <script src="../../static/metisMenu/dist/metisMenu.min.js"></script>
 
-    <!-- Morris Charts JavaScript
-    <script src="../../bower_components/raphael/raphael-min.js"></script>
-    <script src="../../bower_components/morrisjs/morris.min.js"></script>
-    <script src="../../js/morris-data.js"></script>
-    -->
+    <!-- Custom Theme JavaScript -->
+
+    <!-- DataTables JavaScript -->
+    <script src="../../static/DATA_TABLES/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="../../static/DATA_TABLES/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
+  
+
+
     <!-- Custom Theme JavaScript -->
     <script src="../../static/js/sb-admin-2.js"></script>
 
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+    </script>
+
+       
+
 </body>
+
+
+
 
 </html>

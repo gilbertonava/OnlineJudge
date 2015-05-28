@@ -15,7 +15,7 @@ $mysqli= Conectarse();
             $row=mysqli_fetch_array($file,MYSQLI_BOTH);
             $ruta='../_Proyectos/'.$row['rutaProyecto'].'.pdf';
         }
-        echo $ruta;
+        //echo $ruta;
         
         $query='DELETE FROM proyecto where idproyecto='.$_POST['idTo'].';';
         $resultado=$mysqli->query($query);

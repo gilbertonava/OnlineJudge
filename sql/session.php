@@ -26,20 +26,20 @@ function START_SESSION(){
 
 	       	 $_SESSION['user']=@$_POST['user'];   
 				echo 'user founded';
-		      header('Location:../index.php');
+		      header('Location:../../index.php');
 		      return $_SESSION['user'];
 	       } 
 
 	       else
     			{
 					echo 'user not found';
-    				header('Location:../login.php');
+    				header('Location:../../login.php');
     			}       
   		}
     		else
     			{
 				echo 'without Post[]';
-    				header('Location:../login.php');
+    				header('Location:../../login.php');
     			}
 	}
 

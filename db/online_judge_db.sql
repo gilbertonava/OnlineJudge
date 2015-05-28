@@ -104,7 +104,7 @@ CREATE TABLE `concursante` (
   `credencial` varchar(45) NOT NULL,
   PRIMARY KEY (`idConcursante`),
   KEY `iduserConcursante_idx` (`idConcursante`),
-  CONSTRAINT `iduserAdmin0` FOREIGN KEY (`idConcursante`) REFERENCES `usuarios` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `iduserAdmin0` FOREIGN KEY (`idConcursante`) REFERENCES `usuarios` (`idUsuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -275,7 +275,7 @@ CREATE TABLE `materia` (
   `idDocente` int(11) NOT NULL,
   PRIMARY KEY (`idmateria`),
   KEY `idDocente_idx` (`idDocente`),
-  CONSTRAINT `idDocente` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `idDocente` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idUsuario`) ON DELETE NO ACTION ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -300,12 +300,12 @@ CREATE TABLE `proyecto` (
   `rutaProyecto` varchar(255) NOT NULL,
   `complejidad` varchar(45) NOT NULL,
   `estado` varchar(45) NOT NULL,
-  `idDocente` int(11) NOT NULL,
+  `idDocente` int(11) DEFAULT NULL,
   `nombreProyecto` varchar(200) NOT NULL,
   PRIMARY KEY (`idproyecto`),
   KEY `idDocente_fk_idx` (`idDocente`),
-  CONSTRAINT `maestro` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idUsuario`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
+  CONSTRAINT `maestro` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idUsuario`) ON DELETE NO ACTION ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -314,7 +314,7 @@ CREATE TABLE `proyecto` (
 
 LOCK TABLES `proyecto` WRITE;
 /*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
-INSERT INTO `proyecto` VALUES (56,'49f929ddb6fbcd181d86e1307a7e1cfaf062d5c6_@_@_8_razones_para_cambiar_a_IBM_DB2.pdf','BAJA','ACTIVO',1,'A+B'),(57,'8fc4bb72c068fdb41cb19c2b8975e4fcc9400ba3_@_@_Faster problem solving in Java with heuristic search.pdf','BAJA','ACTIVO',1,'Fibonacci'),(58,'a3242ae2b80d8a8e8d4fa3606c8ab1c9435385e8_@_@_pc2v9AdminGuide.pdf','MEDIA','ACTIVO',1,'Cunting Cows');
+INSERT INTO `proyecto` VALUES (57,'8fc4bb72c068fdb41cb19c2b8975e4fcc9400ba3_@_@_Faster problem solving in Java with heuristic search.pdf','MEDIA','ACTIVO',1,'Fibonacci r');
 /*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -368,7 +368,7 @@ CREATE TABLE `usuarios` (
   `fechaNacimiento` date NOT NULL,
   `estado` varchar(45) NOT NULL,
   PRIMARY KEY (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -377,7 +377,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'PEPE','JOSE ANDRES','PEREZ','MURILLO','PEMUJO123','M','1978-12-23','ACTIVO');
+INSERT INTO `usuarios` VALUES (1,'PEPE','JOSE ANDRES','PEREZ','MURILLO','PEMUJO123','M','1978-12-23','ACTIVO'),(2,'juan','ma','bd','d','nj','F','0000-00-00','IN');
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -390,4 +390,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-25 22:09:21
+-- Dump completed on 2015-05-27 22:42:44

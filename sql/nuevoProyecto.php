@@ -86,7 +86,7 @@ try {
         echo '<br><h1>Unable to insert</h1><br />';
         session_start();
         $_SESSION['proyectoInsertado'] = 'false';
-        header('Location:../pages/gp_nuevo_proyecto.php');
+        header('Location:../pages/problemas/gp_nuevo_proyecto.php');
     } else {
         echo '<br><h1>Insert successfully</h1> <br />';
         
@@ -98,7 +98,7 @@ try {
 */
             session_start();
             $_SESSION['proyectoInsertado'] = 'true';
-            header('Location:../pages/gp_nuevo_proyecto.php');
+            header('Location:../pages/problemas/gp_nuevo_proyecto.php');
         //}
     }
 }
@@ -116,7 +116,7 @@ try {
 else{
      session_start();
         $_SESSION['error_file'] = 'true';
-        header('Location:../pages/gp_nuevo_proyecto.php');
+        header('Location:../pages/problemas/gp_nuevo_proyecto.php');
 }
 ?>
 
