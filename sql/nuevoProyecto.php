@@ -1,8 +1,8 @@
 <?php
 
-include 'conexion.php';
+include_once './dbconnection.php';
 
-$mysqli = Conectarse();
+$mysqli = DbConnection::getInstance();
 
 /**
  * Todo
@@ -82,7 +82,7 @@ try {
 
     echo $query;
 
-    if (!$resultado = $mysqli->query($query)) {
+    if (!$resultado = $mysqli->executeQuery($query,'')) {
         echo '<br><h1>Unable to insert</h1><br />';
         session_start();
         $_SESSION['proyectoInsertado'] = 'false';

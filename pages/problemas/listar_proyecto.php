@@ -200,14 +200,16 @@ if (isset($_SESSION['visualizar']) && $inicio) {
                                         <tbody>
 
 <?php
-include '../../sql/conexion.php';
+//include '../../sql/conexion.php';
+include_once '../../sql/dbconnection.php';
 try {
-    $mysqli = Conectarse();
+    $mysqli = DbConnection::getInstance();
 
     $query = 'SELECT idproyecto,rutaProyecto,complejidad,nombreProyecto FROM proyecto WHERE estado='
             . "'ACTIVO';";
 
-    $resultado = $mysqli->query($query);
+    //$resultado = $mysqli->query($query);
+    $resultado=$mysqli->executeQuery($query,'');
 
     if (!$resultado) {
         printf("Error: %s\n", $mysqli->error);

@@ -1,8 +1,8 @@
 <?php
 
-include 'conexion.php';
+include './dbconnection.php';
 
-$mysqli = Conectarse();
+$mysqli = DbConnection::getInstance();
 
 /**
  * Todo
@@ -94,7 +94,7 @@ if (isset($_FILES["rutaProyecto"])) {
 
                 echo $query;
 
-                if (!$resultado = $mysqli->query($query)) {
+                if (!$resultado = $mysqli->executeQuery($query,'')) {
                     echo '<br><h1>Unable to insert</h1><br />';
                     session_start();
                     $_SESSION['proyectoActualizado'] = 'false';
@@ -137,7 +137,7 @@ if (isset($_FILES["rutaProyecto"])) {
 
                 echo $query;
 
-                if (!$resultado = $mysqli->query($query)) {
+                if (!$resultado = $mysqli->executeQuery($query,'')) {
                     echo '<br><h1>Unable to insert</h1><br />';
                     session_start();
                     $_SESSION['proyectoActualizado'] = 'false';

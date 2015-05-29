@@ -206,19 +206,7 @@ if (isset($_SESSION['proyectoInsertado'])) {
                                                    required accept="application/pdf" 
                                                    >
                                         </div>
-
-                                        <!-- <div class="form-group">
-                                             <label class="control-label" for="fechaProyecto">Seleccione la Fecha de Aplicación Proyecto</label>
-                                             <input type="date" id="fechaProyecto" name="fechaProyecto" class="form-control" >
-                                         </div>
-                                        -->
-
-                                        <!-- <div class="form-group">
-                                            <label class="control-label" for="horaInicioProyecto">Seleccione Hora inicia Proyecto</label>
-                                            <input type="time" id="horaInicioProyecto" class="form-control" placeholder="Hora Inicio">
-                                        </div> -->
-
-
+                                        
                                         <div class=" form-group col-md-offset-3">
                                             <button type="submit" id="btn-cancel-registrarProyecto" class="btn btn-outline btn-default">Cancelar</button>
                                             <button type="submit" id="btn-registrarProyecto" name="btn-registrarProyecto" class="btn btn-outline btn-primary">Registrar</button>

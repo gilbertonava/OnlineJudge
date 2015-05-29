@@ -1,6 +1,6 @@
 <?php
 
-include './conexion.php';
+include './dbconnection.php';
 
 $mysqli= Conectarse();
 
@@ -8,7 +8,7 @@ $mysqli= Conectarse();
     if(isset($_POST['idTo'])){
         
         $archivo='SELECT rutaProyecto FROM proyecto WHERE idproyecto='.$_POST['idTo'].';';
-        $file=$mysqli->query($archivo);
+        $file=$mysqli->executeQuery($archivo,'');
         $ruta="";
         if ($file){
             
@@ -18,7 +18,7 @@ $mysqli= Conectarse();
         //echo $ruta;
         
         $query='DELETE FROM proyecto where idproyecto='.$_POST['idTo'].';';
-        $resultado=$mysqli->query($query);
+        $resultado=$mysqli->executeQuery($query);
         if ($resultado) {
             echo 'Se ha eliminado correctamente';
             unlink($ruta);
