@@ -1,76 +1,34 @@
 <?php
-include '../../sql/conexion.php';
+include '../../modelo/dbconnection.php';
+include '../../modelo/gestionProyectos.php';
 
 session_start();
 
+$row = NULL;
 
-
-$mysqli = Conectarse();
 if (!empty($_POST)) {
-    try{
+        if (isset($_POST['editar'])) {
+            try {
+                    $edicion=new gestionProyectos();
+                    $row = $edicion->getProjectData($_POST['editar']);
 
-    $query = 'SELECT ';
+                    if (count($row) == 0) {
+                        header('Location:../problemas/listar_proyecto.php');
+                    }
+                } catch (RuntimeException $e) {
+                header('Location:../pages/problemas/listar_proyectos.php'); }
+        }
+    } else {
+                header('Location:../pages/problemas/listar_proyecto.php');
+                exit();
+            }
 
-    $query = 'SELECT rutaProyecto,complejidad,nombreProyecto,estado FROM proyecto WHERE idproyecto='
-            . $_POST['editar'] . ';';
-
-    $resultado = $mysqli->query($query);
-
-    if (!$resultado) {
-        printf("Error: %s\n", $mysqli->error);
-        header('Location:../../pages/listar_proyecto.php');
-    }
-
-    $row = mysqli_fetch_array($resultado, MYSQLI_BOTH);
-    }  catch (mysqli_sql_exception $e){        header('Location:../../pages/listar_proyectos.php');}
+if ($row == NULL) {
+    header('Location:../problemas/listar_proyecto.php');
 }
-
-else{
-    header('Location:../../pages/listar_proyecto.php');
-    exit();
-}
-
-
-if (isset($_SESSION['error_file'])) {
-    if ($_SESSION['error_file'] == 'true') {
-        echo ' <div class="alert alert-danger alert-dismissable">
-                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                El archivo de proyecto no se cargo correctamente <br> <b> Tamaño max < 3.1 MB </b>  Formato PDF!
-                            </div>';
-
-        unset($_SESSION['error_file']);
-        unset($_FILES['rutaProyecto']);
-    }
-}
-
-if (isset($_SESSION['proyectoActualizado'])) {
-
-
-
-    if ($_SESSION['proyectoActualizado'] == 'true') {
-        echo ' <div class="alert alert-success alert-dismissable">
-                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                El proyecto se actualizo correctamente !
-                            </div>';
-
-        unset($_SESSION['proyectoActualizado']);
-        unset($_FILES['rutaProyecto']);
-    } else if ($_SESSION['proyectoActualizado'] == 'false') {
-        echo ' <div class="alert alert-danger alert-dismissable">
-                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                No fue posible actualizar el proyecto.
-                            </div>';
-        unset($_SESSION['proyectoActualizado']);
-        unset($_FILES['rutaProyecto']);
-    }
-}
-
-
-
-
 ?>
 
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
     <head>
@@ -117,7 +75,7 @@ if (isset($_SESSION['proyectoActualizado'])) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../pages/index.html"> Juez en Linea ITSMante </a>
+                    <a class="navbar-brand" href="../index.html"> Juez en Linea ITSMante </a>
                 </div>
                 <!-- /.navbar-header -->
 
@@ -150,24 +108,24 @@ if (isset($_SESSION['proyectoActualizado'])) {
                             <li class="active">
                                 <a href="#"><i class="fa fa-files-o fa-fw"></i> Panel de Control<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
-                                  <li>
-                                    <a href="../problemas/listar_proyecto.php">Proyectos</a>
-                                </li>
+                                    <li>
+                                        <a href="../problemas/listar_proyecto.php">Proyectos</a>
+                                    </li>
 
-                                <li>
-                                    <a href="../examenes/gestionarExamenes.html">Examenes</a>
-                                </li>
+                                    <li>
+                                        <a href="../examenes/gestionarExamenes.html">Examenes</a>
+                                    </li>
 
-                                <li>
-                                    <a href="../materias/listarMateria_merce.html">Materias</a>
-                                </li>
+                                    <li>
+                                        <a href="../materias/listarMateria_merce.html">Materias</a>
+                                    </li>
 
-                                <li>
-                                    <a href="../usuarios/GestionarUsuario-joosuse.html">Usuarios</a>
-                                </li>
-                                <li>
-                                    <a href="../usuarios/login.html">Login</a>
-                                </li>
+                                    <li>
+                                        <a href="../usuarios/GestionarUsuario-joosuse.html">Usuarios</a>
+                                    </li>
+                                    <li>
+                                        <a href="../usuarios/login.html">Login</a>
+                                    </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
@@ -201,159 +159,128 @@ if (isset($_SESSION['proyectoActualizado'])) {
                     </div>
                     <br>
                     <!-- /.row -->
-
-
-
                     <div class="row">
-
-
-
                         <div class="col-md-12 col-lg-12">
                             <div class="panel panel-primary">
                                 <div class="panel-heading">Proporcione los datos del Proyecto</div>
                                 <div class="panel-body">
-                                    <form role="form" method="post" enctype="multipart/form-data" 
-                                          action="../../sql/actualizar_proyecto.php">
-                                        <div class="form-group">
-                                            <label class="control-label" for="nombreProyecto">Nombre del proyecto</label>
-                                            <input type="text" class="form-control" id="nombreProyecto" 
-                                                   name="nombreProyecto" placeholder="Nombre Proyecto"
-                                                   value="<?php echo $row['nombreProyecto']; ?>" required>
-                                        </div>
 
+                                    <form role="form" method="POST" enctype="multipart/form-data" 
+                                          action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                                              <?php foreach ($row as $value) { ?>
+                                            <div class="form-group">
+                                                <label class="control-label" for="nombreProyecto">Nombre del proyecto</label>
+                                                <input type="text" class="form-control" id="nombreProyecto" 
+                                                       name="nombreProyecto" placeholder="Nombre Proyecto"
+                                                       value="<?php echo $value['nombreProyecto']; ?>" required/>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label" for="complejidad">Complejidad</label>
+                                                <select class="form-control" id="complejidad" name="complejidad"  >
+                                                    <?php
+                                                    $options = array('value1' => 'BAJA', 'value2' => 'MEDIA', 'value3' => 'ALTA'); //etc.
+                                                    foreach ($options as $val => $label) {
+                                                        if ($value['complejidad'] == $label) {
+                                                            $selected = "selected='selected'";
+                                                        } else {
+                                                            $selected = '';
+                                                        }
 
-
-
-
-                                        <div class="form-group">
-                                            <label class="control-label" for="complejidad">Complejidad</label>
-                                            <select class="form-control" id="complejidad" name="complejidad"  >
-
-                                                <?php
-                                                
-                                                $options = array('value1' => 'BAJA', 'value2' => 'MEDIA','value3'=>'ALTA'); //etc.
-                                                foreach ($options as $val => $label) {
-                                                    if($row['complejidad']== $label){ 
-                                                    $selected ="selected='selected'";
+                                                        echo "<option value='$label' $selected>$label</option>\n";
                                                     }
-                                                else {$selected='';}
-                                                    
-                                                    echo "<option value='$label' $selected>$label</option>\n";
-                                                }
-                                                ?>"
-                                               
-                                            </select>
+                                                    ?>
 
-                                        </div>
+                                                </select>
 
-                                        <div class="form-group">
-                                            <label class="control-label" for="estadoProyecto">Seleccione Estado del Proyecto</label>
-                                            <select class="form-control" id="estadoProyecto" name="estadoProyecto">
-                                                <?php
-                                                
-                                                $options = array('value1' => 'ACTIVO', 'value2' => 'INACTIVO','value3'=>'RESUELTO'); //etc.
-                                                foreach ($options as $val => $label) {
-                                                    if($row['estado']== $label){ 
-                                                    $selected ="selected='selected'";
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="control-label" for="estadoProyecto">Seleccione Estado del Proyecto</label>
+                                                <select class="form-control" id="estadoProyecto" name="estadoProyecto">
+                                                    <?php
+                                                    $options = array('value1' => 'ACTIVO', 'value2' => 'INACTIVO', 'value3' => 'RESUELTO'); //etc.
+                                                    foreach ($options as $val => $label) {
+                                                        if ($value['estado'] == $label) {
+                                                            $selected = "selected='selected'";
+                                                        } else {
+                                                            $selected = '';
+                                                        }
+
+                                                        echo "<option value='$label' $selected>$label</option>\n";
                                                     }
-                                                else {$selected='';}
-                                                    
-                                                    echo "<option value='$label' $selected>$label</option>\n";
-                                                }
-                                                ?>"
-                                            </select>
+                                                    ?>
+                                                </select>
 
-                                        </div>
+                                            </div>
 
-                                        <div class="form-group">
-                                            <label class="control-label" for="rutaProyecto">Cambiar Archivo Proyecto (PDF MAX=3.1 MB) </label>
-                                            <p class="text-info">Current file: &nbsp;<?php echo $row['rutaProyecto']; ?> </p>
-                                            <input type="file" id="rutaProyecto" name="rutaProyecto" accept="application/pdf"
-                                                   class="form-control btn-outline btn-primary"
-                                                   placeholder="Archivo proyecto" >
-                                        </div>
+                                            <div class="form-group">
+                                                <label class="control-label" for="rutaProyecto">Cambiar Archivo Proyecto (PDF MAX=3.1 MB) </label>
+                                                <p class="text-info">Current file: &nbsp;<?php echo $value['rutaProyecto']; ?> </p>
+                                                <input type="file" id="rutaProyecto" name="rutaProyecto" accept="application/pdf"
+                                                       class="form-control btn-outline btn-primary"
+                                                       placeholder="Archivo proyecto" />
+                                            </div>
+                                            <div class=" form-group col-md-offset-3">
+                                                <!--<button type="submit" id="btn-cancel-registrarProyecto" class="btn btn-outline btn-default">Cancelar</button>-->
+                                                <input type="hidden" name="id" value="<?php echo $_POST['editar']; ?>"/>
+                                                <input type="hidden" name="oldfile" value="<?php echo $value['rutaProyecto']; ?>"/>
+                                                <button type="submit" id="btn-registrarProyecto" class="btn btn-outline btn-primary">Guardar Cambios</button>
+                                            </div>
+                                        </form>
 
-                                        <!--<div class="form-group">
-                                            <label class="control-label" for="fechaProyecto">Seleccione la Fecha de Aplicación Proyecto</label>
-                                            <input type="date" id="fechaProyecto" class="form-control" placeholder="Fecha a Aplicar">
-                                        </div>
-
-                                        <!-- <div class="form-group">
-                                            <label class="control-label" for="horaInicioProyecto">Seleccione Hora inicia Proyecto</label>
-                                            <input type="time" id="horaInicioProyecto" class="form-control" placeholder="Hora Inicio">
-                                        </div> -->
-
-
-
-                                        <div class=" form-group col-md-offset-3">
-                                            <!--<button type="submit" id="btn-cancel-registrarProyecto" class="btn btn-outline btn-default">Cancelar</button>-->
-                                            <input type="hidden" name="id" value="<?php  echo $_POST['editar'];?>">
-                                            <input type="hidden" name="oldfile" value="<?php echo $row['rutaProyecto']; ?>">
-                                            <button type="submit" name="btn-registrarProyecto" class="btn btn-outline btn-primary">Guardar Cambios</button>
-                                        </div>
-
-
-                                    </form>
-                                    
-                                    <?php
-                                    
-                                    /*
-                                    $file_name=  explode("_@_@_",$row['rutaProyecto']);
-                                    
-                                    echo '<pre>';
-                                    print_r($file_name);
-                                    echo '</pre>';
-                                    if(@$_POST['btn-registrarProyecto']){
-                                        
-                                         echo '<pre>';
-                                    print_r($_POST);
-                                    echo '</pre>';
-                                        
-                                        if($_POST['nombreProyecto']!=$row['nombreProyecto']||$_POST['complejidad']!=$row['complejidad']
-                                                ||$_POST['estadoProyecto']!=$row['estado']){
-                                                if($_POST['rutaProyecto']!=''){
-                                                    #$_POST['rutaProyecto']!=$file_name[1]
-                                            
-                                                header('Location:../../sql/actualizar_proyecto.php');}
-                                                
-                                                
-                                                
-                                                else{
-                                                    echo ' <div class="alert alert-warning alert-dismissable">
-                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                No hay cambios por guardar ! <br>                            </div>';
-                                                }
-                                                }
+                                        <?php
                                     }
-                                    
-                                               */ 
-                                    
-                                    
+                                    /*
+                                      $file_name=  explode("_@_@_",$row['rutaProyecto']);
+
+                                      echo '<pre>';
+                                      print_r($file_name);
+                                      echo '</pre>';
+                                      if(@$_POST['btn-registrarProyecto']){
+
+                                      echo '<pre>';
+                                      print_r($_POST);
+                                      echo '</pre>';
+
+                                      if($_POST['nombreProyecto']!=$row['nombreProyecto']||$_POST['complejidad']!=$row['complejidad']
+                                      ||$_POST['estadoProyecto']!=$row['estado']){
+                                      if($_POST['rutaProyecto']!=''){
+                                      #$_POST['rutaProyecto']!=$file_name[1]
+
+                                      header('Location:../../modelo/actualizar_proyecto.php');}
+                                      else{
+                                      echo ' <div class="alert alert-warning alert-dismissable">
+                                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                      No hay cambios por guardar ! <br>                            </div>';
+                                      }
+                                      }
+                                      }
+
+                                     */
                                     ?>
-                                    
-                                    
+
+
                                 </div>
                             </div>
 
                         </div>
                     </div>
 
+                    <?php
+                    if (@$_POST['id']) {
+                        $actualizar = new gestionProyectos();
+                        $actualizar->actualizarProyecto($_POST);
 
-
-
-
+                        echo '<pre>';
+                        print_r($_POST);
+                        echo '</pre>';
+                    }
+                    ?>
                 </div>
-
-
-
-
             </div>
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->
-        
-       
-
     </div>
     <!-- /#wrapper -->
 

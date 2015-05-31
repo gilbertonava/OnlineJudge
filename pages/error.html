@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>Online Judge ITSMANTE </title>
 
     <!-- Bootstrap Core CSS -->
     <link href="../static/css/bootstrap.min.css" rel="stylesheet">
@@ -51,7 +51,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">SB Admin v2.0</a>
+                <a class="navbar-brand" href="index.html">Online Judge ITSMANTE</a>
             </div>
             <!-- /.navbar-header -->
 
@@ -79,9 +79,20 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                                                
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                <button class="btn btn-default" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        
                         <li>
-                            <a href="#" class="active"><i class="fa fa-files-o fa-fw"></i> Panel de Control<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i>Panel de Control<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="../pages/problemas/listar_proyecto.php">Proyectos</a>
@@ -101,10 +112,6 @@
                                 <li>
                                     <a href="../pages/usuarios/login.html">Login</a>
                                 </li>
-                                
-                                <li>
-                                    <a href="error.html">Fail</a>
-                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -116,16 +123,26 @@
         </nav>
 
         <div id="page-wrapper">
+
+            <!--:) agrega tus inc#es componentes aki!!!!!!!!!-->
+
+
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Welcome!</h1>
+                    <h1 class="page- text-danger text-center">Something was wrong :( </h1>
                 </div>
-                <!-- /.col-lg-12 -->
+                
             </div>
             <!-- /.row -->
-            <div class="row">
-               <p class="text-center">some content here</p>
+            <div class="row col-md-offset-2">
+                <img src="../static/images/404.jpg" 
+                     alt="Page Not Found (404)." 
+                     class="img  text-center">
+               
             </div>
+
+
+            <!--:) No agregeges tus inc#es componentes  DESPUES de aki!!!!!!!!!-->
            
         </div>
         <!-- /#page-wrapper -->

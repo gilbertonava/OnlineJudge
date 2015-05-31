@@ -1,8 +1,10 @@
 <?php
+#Eliminar proyecto seleccionado
+#desde la peticion hecha desde el modal dialog en la ventana <-listar proyecto
 
 include './dbconnection.php';
 
-$mysqli= Conectarse();
+$mysqli=  DbConnection::getInstance();
 
  
     if(isset($_POST['idTo'])){
@@ -20,14 +22,14 @@ $mysqli= Conectarse();
         $query='DELETE FROM proyecto where idproyecto='.$_POST['idTo'].';';
         $resultado=$mysqli->executeQuery($query);
         if ($resultado) {
-            echo 'Se ha eliminado correctamente';
+            $_SESSION['proyectoEliminado']='true';
             unlink($ruta);
             
         }
-        else{ echo 'No se pudo eliminar el Registo seleccionado';}
+        else{ $_SESSION['proyectoEliminado']='false';}
     }
     
  else {
-    echo 'vacio POST[]';
+    $_SESSION['proyectoEliminado']='false';
 }
 ?>

@@ -1,6 +1,10 @@
 <?php
+include_once '../../modelo/gestionProyectos.php';
+
 session_start();
 
+#Estados post-registro
+#Hubo problemas con la carga del archivo
 if (isset($_SESSION['error_file'])) {
     if ($_SESSION['error_file'] == 'true') {
         echo ' <div class="alert alert-danger alert-dismissable">
@@ -16,7 +20,7 @@ if (isset($_SESSION['error_file'])) {
 if (isset($_SESSION['proyectoInsertado'])) {
 
 
-
+    #all is right!
     if ($_SESSION['proyectoInsertado'] == 'true') {
         echo ' <div class="alert alert-success alert-dismissable">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
@@ -25,7 +29,9 @@ if (isset($_SESSION['proyectoInsertado'])) {
 
         unset($_SESSION['proyectoInsertado']);
         unset($_FILES['rutaProyecto']);
-    } else if ($_SESSION['proyectoInsertado'] == 'false') {
+    }
+    #something was wrong
+    else if ($_SESSION['proyectoInsertado'] == 'false') {
         echo ' <div class="alert alert-danger alert-dismissable">
                                 <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                                 No fue posible registrar el proyecto  <a href="#" class="alert-link">Alert Link</a>.
@@ -98,7 +104,7 @@ if (isset($_SESSION['proyectoInsertado'])) {
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="../pages/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li><a href="../usuarios/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
                         </ul>
                         <!-- /.dropdown-user -->
@@ -110,11 +116,11 @@ if (isset($_SESSION['proyectoInsertado'])) {
                 <div class="navbar-default sidebar" role="navigation">
 
                     <ul class="nav" id="side-menu">
-                        
+
                         <li class="list-group">
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Panel de Control<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                               <li>
+                                <li>
                                     <a href="../problemas/listar_proyecto.php">Proyectos</a>
                                 </li>
 
@@ -171,7 +177,7 @@ if (isset($_SESSION['proyectoInsertado'])) {
                                 <div class="panel-heading">Proporcione los datos del Proyecto</div>
 
                                 <div class="panel-body">
-                                    <form role="form" enctype="multipart/form-data" action="../../sql/nuevoProyecto.php" method="POST" >
+                                    <form role="form" enctype="multipart/form-data" action="" method="POST" >
                                         <div class="form-group">
                                             <label class="control-label" for="nombreProyecto">Nombre del proyecto</label>
                                             <input type="text" class="form-control" id="nombreProyecto" 
@@ -206,29 +212,34 @@ if (isset($_SESSION['proyectoInsertado'])) {
                                                    required accept="application/pdf" 
                                                    >
                                         </div>
-                                        
+
                                         <div class=" form-group col-md-offset-3">
-                                            <button type="submit" id="btn-cancel-registrarProyecto" class="btn btn-outline btn-default">Cancelar</button>
-                                            <button type="submit" id="btn-registrarProyecto" name="btn-registrarProyecto" class="btn btn-outline btn-primary">Registrar</button>
+                                            <button type="submit" id="btn-cancel-registrarProyecto" 
+                                                    class="btn btn-outline btn-default">Cancelar</button>
+                                            <button type="submit" id="btn-registrarProyecto" name="registrarProyecto" 
+                                                    class="btn btn-outline btn-primary" value="enviar">Registrar</button>
                                         </div>
-
-
                                     </form>
-
-
                                 </div>
                             </div>
-
                         </div>
                     </div>
-                </div>
+                </div>           
+                <!-- /.container-fluid -->
             </div>
-            <!-- /.container-fluid -->
+            <!-- /#page-wrapper -->
         </div>
-        <!-- /#page-wrapper -->
-
-
         <!-- /#wrapper -->
+
+<?php
+if (@$_POST['registrarProyecto']) {
+    $registro = new gestionProyectos();
+    $registro->RegistrarProyecto($_POST);
+    //echo $_SERVER['PHP_SELF'];
+    
+    
+} 
+?>
 
         <!-- jQuery -->
         <script src="../../static/js/jquery.min.js"></script>
