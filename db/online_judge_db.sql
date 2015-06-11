@@ -32,15 +32,6 @@ CREATE TABLE `administrador` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `administrador`
---
-
-LOCK TABLES `administrador` WRITE;
-/*!40000 ALTER TABLE `administrador` DISABLE KEYS */;
-/*!40000 ALTER TABLE `administrador` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `alumno`
 --
 
@@ -55,15 +46,6 @@ CREATE TABLE `alumno` (
   CONSTRAINT `iduser` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `alumno`
---
-
-LOCK TABLES `alumno` WRITE;
-/*!40000 ALTER TABLE `alumno` DISABLE KEYS */;
-/*!40000 ALTER TABLE `alumno` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `alumno_has_examen`
@@ -84,15 +66,6 @@ CREATE TABLE `alumno_has_examen` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `alumno_has_examen`
---
-
-LOCK TABLES `alumno_has_examen` WRITE;
-/*!40000 ALTER TABLE `alumno_has_examen` DISABLE KEYS */;
-/*!40000 ALTER TABLE `alumno_has_examen` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `concursante`
 --
 
@@ -104,18 +77,9 @@ CREATE TABLE `concursante` (
   `credencial` varchar(45) NOT NULL,
   PRIMARY KEY (`idConcursante`),
   KEY `iduserConcursante_idx` (`idConcursante`),
-  CONSTRAINT `iduserAdmin0` FOREIGN KEY (`idConcursante`) REFERENCES `usuarios` (`idUsuario`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `iduserAdmin0` FOREIGN KEY (`idConcursante`) REFERENCES `usuarios` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `concursante`
---
-
-LOCK TABLES `concursante` WRITE;
-/*!40000 ALTER TABLE `concursante` DISABLE KEYS */;
-/*!40000 ALTER TABLE `concursante` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `docente`
@@ -131,16 +95,6 @@ CREATE TABLE `docente` (
   CONSTRAINT `idUSUARIO` FOREIGN KEY (`idUsuario`) REFERENCES `usuarios` (`idUsuario`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `docente`
---
-
-LOCK TABLES `docente` WRITE;
-/*!40000 ALTER TABLE `docente` DISABLE KEYS */;
-INSERT INTO `docente` VALUES (1,'1102PEMUJO23');
-/*!40000 ALTER TABLE `docente` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `ejecucionexamen`
@@ -162,15 +116,6 @@ CREATE TABLE `ejecucionexamen` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `ejecucionexamen`
---
-
-LOCK TABLES `ejecucionexamen` WRITE;
-/*!40000 ALTER TABLE `ejecucionexamen` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ejecucionexamen` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `ejecucionproyecto`
 --
 
@@ -188,15 +133,6 @@ CREATE TABLE `ejecucionproyecto` (
   CONSTRAINT `idProyecto` FOREIGN KEY (`idproyecto`) REFERENCES `proyecto` (`idproyecto`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `ejecucionproyecto`
---
-
-LOCK TABLES `ejecucionproyecto` WRITE;
-/*!40000 ALTER TABLE `ejecucionproyecto` DISABLE KEYS */;
-/*!40000 ALTER TABLE `ejecucionproyecto` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `evaluacion`
@@ -222,15 +158,6 @@ CREATE TABLE `evaluacion` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `evaluacion`
---
-
-LOCK TABLES `evaluacion` WRITE;
-/*!40000 ALTER TABLE `evaluacion` DISABLE KEYS */;
-/*!40000 ALTER TABLE `evaluacion` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `examen`
 --
 
@@ -248,18 +175,9 @@ CREATE TABLE `examen` (
   `EstadoExamen` varchar(45) NOT NULL,
   PRIMARY KEY (`idexamen`),
   KEY `idMateria_idx` (`idMateria`),
-  CONSTRAINT `idMateria` FOREIGN KEY (`idMateria`) REFERENCES `materia` (`idmateria`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `idMateria` FOREIGN KEY (`idMateria`) REFERENCES `materia` (`idmateria`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `examen`
---
-
-LOCK TABLES `examen` WRITE;
-/*!40000 ALTER TABLE `examen` DISABLE KEYS */;
-/*!40000 ALTER TABLE `examen` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `materia`
@@ -275,18 +193,9 @@ CREATE TABLE `materia` (
   `idDocente` int(11) NOT NULL,
   PRIMARY KEY (`idmateria`),
   KEY `idDocente_idx` (`idDocente`),
-  CONSTRAINT `idDocente` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idUsuario`) ON DELETE NO ACTION ON UPDATE CASCADE
+  CONSTRAINT `idDocente` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `materia`
---
-
-LOCK TABLES `materia` WRITE;
-/*!40000 ALTER TABLE `materia` DISABLE KEYS */;
-/*!40000 ALTER TABLE `materia` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `proyecto`
@@ -300,23 +209,13 @@ CREATE TABLE `proyecto` (
   `rutaProyecto` varchar(255) NOT NULL,
   `complejidad` varchar(45) NOT NULL,
   `estado` varchar(45) NOT NULL,
-  `idDocente` int(11) DEFAULT NULL,
+  `idDocente` int(11) NOT NULL,
   `nombreProyecto` varchar(200) NOT NULL,
   PRIMARY KEY (`idproyecto`),
   KEY `idDocente_fk_idx` (`idDocente`),
-  CONSTRAINT `maestro` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idUsuario`) ON DELETE NO ACTION ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=utf8;
+  CONSTRAINT `maestro` FOREIGN KEY (`idDocente`) REFERENCES `docente` (`idUsuario`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `proyecto`
---
-
-LOCK TABLES `proyecto` WRITE;
-/*!40000 ALTER TABLE `proyecto` DISABLE KEYS */;
-INSERT INTO `proyecto` VALUES (57,'8fc4bb72c068fdb41cb19c2b8975e4fcc9400ba3_@_@_Faster problem solving in Java with heuristic search.pdf','MEDIA','ACTIVO',1,'Fibonacci r');
-/*!40000 ALTER TABLE `proyecto` ENABLE KEYS */;
-UNLOCK TABLES;
 
 --
 -- Table structure for table `solucionproyecto`
@@ -342,15 +241,6 @@ CREATE TABLE `solucionproyecto` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `solucionproyecto`
---
-
-LOCK TABLES `solucionproyecto` WRITE;
-/*!40000 ALTER TABLE `solucionproyecto` DISABLE KEYS */;
-/*!40000 ALTER TABLE `solucionproyecto` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
 -- Table structure for table `usuarios`
 --
 
@@ -368,18 +258,8 @@ CREATE TABLE `usuarios` (
   `fechaNacimiento` date NOT NULL,
   `estado` varchar(45) NOT NULL,
   PRIMARY KEY (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usuarios`
---
-
-LOCK TABLES `usuarios` WRITE;
-/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'PEPE','JOSE ANDRES','PEREZ','MURILLO','PEMUJO123','M','1978-12-23','ACTIVO'),(2,'juan','ma','bd','d','nj','F','0000-00-00','IN');
-/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
-UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -390,4 +270,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-05-27 22:42:44
+-- Dump completed on 2015-05-23 23:30:49

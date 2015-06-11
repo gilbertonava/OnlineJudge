@@ -1,6 +1,6 @@
 <?php
 include '../../modelo/dbconnection.php';
-include '../../modelo/gestionProyectos.php';
+include '../../modelo/proyecto.php';
 
 session_start();
 
@@ -9,7 +9,7 @@ $row = NULL;
 if (!empty($_POST)) {
         if (isset($_POST['editar'])) {
             try {
-                    $edicion=new gestionProyectos();
+                    $edicion=new GestionProyecto();
                     $row = $edicion->getProjectData($_POST['editar']);
 
                     if (count($row) == 0) {
@@ -268,7 +268,7 @@ if ($row == NULL) {
 
                     <?php
                     if (@$_POST['id']) {
-                        $actualizar = new gestionProyectos();
+                        $actualizar = new GestionProyecto();
                         $actualizar->actualizarProyecto($_POST);
 
                         echo '<pre>';

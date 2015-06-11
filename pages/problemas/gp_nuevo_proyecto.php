@@ -1,5 +1,5 @@
 <?php
-include_once '../../modelo/gestionProyectos.php';
+include_once '../../modelo/proyecto.php';
 
 session_start();
 
@@ -233,7 +233,7 @@ if (isset($_SESSION['proyectoInsertado'])) {
 
 <?php
 if (@$_POST['registrarProyecto']) {
-    $registro = new gestionProyectos();
+    $registro = new GestionProyecto();
     $registro->RegistrarProyecto($_POST);
     //echo $_SERVER['PHP_SELF'];
     

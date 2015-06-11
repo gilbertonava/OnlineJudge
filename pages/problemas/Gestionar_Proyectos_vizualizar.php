@@ -1,4 +1,11 @@
 <?php
+include '../../logs/errorLogging.php';
+
+
+throw new RuntimeException ('hhjdf');
+
+
+
 session_start();
                     
                     if (!empty($_POST)){

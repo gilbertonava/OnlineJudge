@@ -54,27 +54,36 @@ class DbConnection {
         }
         //Se ejecuta la consulta con los caracteres adecuadamente conectados con real_escape_string
         $stmt = $this->mysqlInstance->query($sql);
+		
+        if (!$stmt) {
+            try {
+                throw new RuntimeException("Error en la consulta (code:".$this->mysqlInstance->errno."): " . $this->mysqlInstance->error);
+            } catch (RuntimeException $e) {
+                die($e->getMessage());
+            }
+        }
         return $stmt;
     }
-    
+
     /*
      * Metodo que ejecuta sentencias SELECT
      */
-    public function executeSelectQuery($sql){
+
+    public function executeSelectQuery($sql) {
         $dbResult = $this->executeQuery($sql);
-        $result=[];
-        
+        $result = [];
+
         if ($dbResult) {
             while ($fila = $dbResult->fetch_assoc()) {
                 array_push($result, $fila);
             }
-            
+
             //Liberando el espacio en memoria usado para almacenar los resultados
             $this->releaseResults($dbResult);
         } else {
             die("Error: " . $this->mysqlInstance->error . $this->mysqlInstance->errno);
         }
-        
+
         return $result;
     }
 
@@ -89,6 +98,5 @@ class DbConnection {
     public function close() {
         $this->mysqlInstance->close();
     }
-    
 
 }

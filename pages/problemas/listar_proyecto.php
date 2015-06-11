@@ -1,5 +1,5 @@
 <?php
-include '../../modelo/gestionProyectos.php';
+include '../../modelo/proyecto.php';
 session_start();
 $va = "null";
 if (isset($_SESSION['proyectoEliminado'])) {
@@ -239,7 +239,7 @@ if (isset($_SESSION['proyectoActualizado'])) {
                                                 <?php
                                                 try {
 
-                                                    $listarProyectos = new gestionProyectos();
+                                                    $listarProyectos = new GestionProyecto();
                                                     $proyectos = $listarProyectos->listarProyectos();
 
                                                     foreach ($proyectos as $value) {
@@ -341,7 +341,7 @@ if (isset($_SESSION['proyectoActualizado'])) {
                                                     FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
                                                 if(!is_null($projectsIds))
                                                 {
-                                                    $multi_eliminacion=new gestionProyectos();
+                                                    $multi_eliminacion=new GestionProyecto();
                                                     $multi_eliminacion->eliminarProyectos($_POST);
                                                    // header("Refresh:0");
                                         }}
@@ -351,7 +351,7 @@ if (isset($_SESSION['proyectoActualizado'])) {
                                                     FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
                                                 if(!is_null($projectsIds))
                                                 {
-                                                    $multi_eliminacion=new gestionProyectos();
+                                                    $multi_eliminacion=new GestionProyecto  ();
                                                     $multi_eliminacion->eliminarProyectos($_POST);
                                                    // header("Refresh:0");
                                         }}

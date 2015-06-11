@@ -8,10 +8,9 @@
  * @author Gil
  */
 include_once 'dbconnection.php';
+class GestionProyecto {
 
-class gestionProyectos {
-
-    public function gestionProyectos() {
+    public function __construct() {
         
     }
 
