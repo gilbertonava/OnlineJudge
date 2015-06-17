@@ -28,3 +28,68 @@
 2015-06-02 16:59:35 (CEST)      Object of class RuntimeException could not be converted to int C:\wamp\www\OnlineJudge\logs\errorLogging.php 32
 2015-06-02 16:59:35 (CEST)      Object of class RuntimeException could not be converted to int C:\wamp\www\OnlineJudge\logs\errorLogging.php 32
 2015-06-02 16:59:35 (CEST)        
+2015-06-16 04:07:18 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 247
+2015-06-16 04:10:20 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 247
+2015-06-16 04:13:33 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 247
+2015-06-16 04:13:50 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 247
+2015-06-16 04:15:11 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 246
+2015-06-16 04:15:31 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 246
+2015-06-16 04:16:16 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 246
+2015-06-16 04:16:32 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 246
+2015-06-16 04:16:59 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 246
+2015-06-16 04:18:10 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 246
+2015-06-16 04:19:38 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 246
+2015-06-16 04:43:43 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 233
+2015-06-16 04:45:30 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 233
+2015-06-16 05:00:33 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 236
+2015-06-16 05:07:01 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 250
+2015-06-16 05:07:04 (CEST)      Undefined index: btn-registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 250
+2015-06-16 05:09:54 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 250
+2015-06-16 05:14:49 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 250
+2015-06-16 05:15:00 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 250
+2015-06-16 05:15:06 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 250
+2015-06-16 05:15:07 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 250
+2015-06-16 05:19:34 (CEST)      Undefined index: rutaArchivo C:\wamp\www\OnlineJudge\modelo\examenController.php 61
+2015-06-16 15:51:54 (CEST)      mysqli::mysqli():  C:\wamp\www\OnlineJudge\modelo\dbconnection.php 25
+2015-06-16 15:51:54 (CEST)      mysqli::set_charset(): Couldn't fetch mysqli C:\wamp\www\OnlineJudge\modelo\dbconnection.php 26
+2015-06-16 15:52:31 (CEST)      mysqli::mysqli():  C:\wamp\www\OnlineJudge\modelo\dbconnection.php 25
+2015-06-16 15:52:31 (CEST)      mysqli::set_charset(): Couldn't fetch mysqli C:\wamp\www\OnlineJudge\modelo\dbconnection.php 26
+2015-06-16 15:52:33 (CEST)      mysqli::mysqli():  C:\wamp\www\OnlineJudge\modelo\dbconnection.php 25
+2015-06-16 15:52:33 (CEST)      mysqli::set_charset(): Couldn't fetch mysqli C:\wamp\www\OnlineJudge\modelo\dbconnection.php 26
+2015-06-16 16:05:22 (CEST)      Undefined index: eliminar C:\wamp\www\OnlineJudge\pages\problemas\listar_proyecto.php 338
+2015-06-16 16:05:22 (CEST)      Undefined index: nombreProblema C:\wamp\www\OnlineJudge\pages\problemas\listar_proyecto.php 347
+2015-06-16 16:08:14 (CEST)      Undefined index: registrarProyecto C:\wamp\www\OnlineJudge\pages\problemas\gp_nuevo_proyecto.php 235
+2015-06-16 16:30:58 (CEST)      Undefined index: name C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 255
+2015-06-16 16:32:55 (CEST)      Undefined index: tmp C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _registrar.php 255
+2015-06-16 17:54:29 (CEST)      Undefined index: nombreProblema C:\wamp\www\OnlineJudge\pages\problemas\listar_proyecto.php 349
+2015-06-16 17:54:31 (CEST)      Undefined index: eliminar C:\wamp\www\OnlineJudge\pages\problemas\listar_proyecto.php 340
+2015-06-16 17:54:31 (CEST)      Undefined index: nombreProblema C:\wamp\www\OnlineJudge\pages\problemas\listar_proyecto.php 349
+2015-06-16 19:48:10 (CEST)      Undefined index: registrarProyecto C:\wamp\www\OnlineJudge\pages\problemas\gp_nuevo_proyecto.php 235
+2015-06-16 19:49:00 (CEST)      Undefined index: registrarProyecto C:\wamp\www\OnlineJudge\pages\problemas\gp_nuevo_proyecto.php 235
+2015-06-16 19:49:14 (CEST)      Undefined index: id C:\wamp\www\OnlineJudge\pages\problemas\gp_modificar_proyecto.php 270
+2015-06-16 19:54:20 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\gestionarExamenes.php 301
+2015-06-16 19:54:20 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\gestionarExamenes.php 302
+2015-06-16 19:54:20 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\gestionarExamenes.php 303
+2015-06-16 19:54:20 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\gestionarExamenes.php 301
+2015-06-16 19:54:20 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\gestionarExamenes.php 302
+2015-06-16 19:54:20 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\gestionarExamenes.php 303
+2015-06-16 19:54:25 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\gestionarExamenes.php 301
+2015-06-16 19:54:25 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\gestionarExamenes.php 302
+2015-06-16 19:54:25 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\gestionarExamenes.php 303
+2015-06-16 19:54:25 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\gestionarExamenes.php 301
+2015-06-16 19:54:25 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\gestionarExamenes.php 302
+2015-06-16 19:54:25 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\gestionarExamenes.php 303
+2015-06-16 20:01:27 (CEST)      unlink(../_Examenes/C:wamp	mpphpEE5B.tmp.pdf): No such file or directory C:\wamp\www\OnlineJudge\modelo\eliminar_examen.php 28
+2015-06-17 06:09:19 (CEST)      Undefined variable: verify C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 214
+2015-06-17 06:09:19 (CEST)      Undefined variable: verify C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
+2015-06-17 06:09:19 (CEST)      in_array() expects parameter 2 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
+2015-06-17 06:09:19 (CEST)      Undefined variable: verify C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
+2015-06-17 06:09:19 (CEST)      in_array() expects parameter 2 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
+2015-06-17 06:09:19 (CEST)      Undefined variable: verify C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
+2015-06-17 06:09:19 (CEST)      in_array() expects parameter 2 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
+2015-06-17 06:09:19 (CEST)      Undefined variable: verify C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
+2015-06-17 06:09:19 (CEST)      in_array() expects parameter 2 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
+2015-06-17 06:09:19 (CEST)      Undefined variable: verify C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
+2015-06-17 06:09:19 (CEST)      in_array() expects parameter 2 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
+2015-06-17 06:09:19 (CEST)      Undefined variable: verify C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
+2015-06-17 06:09:19 (CEST)      in_array() expects parameter 2 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225

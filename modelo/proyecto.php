@@ -8,6 +8,7 @@
  * @author Gil
  */
 include_once 'dbconnection.php';
+include_once '../../logs/errorLogging.php';
 class GestionProyecto {
 
     public function __construct() {
@@ -41,7 +42,7 @@ class GestionProyecto {
          * Create projects directory where projects files will be hosted
          */
         //here we should get the session user id
-        $idDocente = 1;
+        $idDocente = 2;
 
 
         /* validar archivo a subir */

@@ -59,7 +59,6 @@ if (isset($_SESSION['proyectoActualizado'])) {
         unset($_FILES['rutaProyecto']);
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -182,7 +181,7 @@ if (isset($_SESSION['proyectoActualizado'])) {
                                         <a href="../problemas/listar_proyecto.php">Proyectos</a>
                                     </li>
                                     <li>
-                                        <a href="../examenes/gestionarExamenes.html">Examenes</a>
+                                        <a href="../examenes/gestionarExamenes.php">Examenes</a>
                                     </li>
                                     <li>
                                         <a href="../materias/listarMateria_merce.html">Materias</a>
@@ -254,7 +253,7 @@ if (isset($_SESSION['proyectoActualizado'])) {
                                                                 <td class="">
                                                                     <div class="row">
                                                                         <div class="toolbar text-center "  role="toolbar" >
-                                                                            
+
                                                                             <form></form>
 
                                                                             <div class="row col-md-offset-2 col-md-4">
@@ -288,7 +287,7 @@ if (isset($_SESSION['proyectoActualizado'])) {
                                                                                 <button  type="button" class="btn btn-sm btn-danger"  value="<?php echo ' ' . $value['idproyecto']; ?>" 
                                                                                          id="btn_delete_<?php echo $value['idproyecto']; ?>" name="elimiar_pro"
                                                                                          onclick="$('#idTo').val($('#btn_delete_<?php echo $value['idproyecto']; ?>').attr('value'));
-                                                                                                 $('#myModal').modal('show');">
+                                                                                                             $('#myModal').modal('show');">
                                                                                     <i class="glyphicon glyphicon-remove"></i>
                                                                                 </button>
 
@@ -333,28 +332,29 @@ if (isset($_SESSION['proyectoActualizado'])) {
                                         <button class="btn btn-pinterest btn-danger" 
                                                 type="submit" name='eliminar-multi'>Eliminar</button>
                                     </div>
-                                    
-                                    
+
+
                                     <?php
-                                        if(@$_POST['eliminar']){
-                                            $projectsIds = filter_input(INPUT_POST, 'eliminar',
-                                                    FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
-                                                if(!is_null($projectsIds))
-                                                {
-                                                    $multi_eliminacion=new GestionProyecto();
-                                                    $multi_eliminacion->eliminarProyectos($_POST);
-                                                   // header("Refresh:0");
-                                        }}
-                                        
-                                        if(@$_POST['nombreProblema']){
-                                            $projectsIds = filter_input(INPUT_POST, 'eliminar',
-                                                    FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
-                                                if(!is_null($projectsIds))
-                                                {
-                                                    $multi_eliminacion=new GestionProyecto  ();
-                                                    $multi_eliminacion->eliminarProyectos($_POST);
-                                                   // header("Refresh:0");
-                                        }}
+                                    
+                                    if(!empty($_POST)){
+                                    if (isset($_POST['eliminar'])) {
+                                        $projectsIds = filter_input(INPUT_POST, 'eliminar', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+                                        if (!is_null($projectsIds)) {
+                                            $multi_eliminacion = new GestionProyecto();
+                                            $multi_eliminacion->eliminarProyectos($_POST);
+                                            // header("Refresh:0");
+                                        }
+                                    }
+
+                                    if (isset($_POST['nombreProblema'])) {
+                                        $projectsIds = filter_input(INPUT_POST, 'eliminar', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
+                                        if (!is_null($projectsIds)) {
+                                            $multi_eliminacion = new GestionProyecto ();
+                                            $multi_eliminacion->eliminarProyectos($_POST);
+                                            // header("Refresh:0");
+                                        }
+                                    }
+                                    }
                                     ?>
 
                                 </div>
@@ -392,11 +392,11 @@ if (isset($_SESSION['proyectoActualizado'])) {
 
         <!-- Page-Level Demo Scripts - Tables - Use for reference -->
         <script>
-                                                                                 $(document).ready(function () {
-                                                                                     $('#dataTables-example').DataTable({
-                                                                                         responsive: true
-                                                                                     });
-                                                                                 });
+                                                                                             $(document).ready(function () {
+                                                                                                 $('#dataTables-example').DataTable({
+                                                                                                     responsive: true
+                                                                                                 });
+                                                                                             });
         </script>
         <!--Delete item selected-->
 
@@ -433,6 +433,7 @@ if (isset($_SESSION['proyectoActualizado'])) {
             });
         </script>
         <!--Set ready value to delete-->
+
 
     </body>
 </html>

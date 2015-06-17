@@ -2,7 +2,7 @@
 include '../../logs/errorLogging.php';
 
 
-throw new RuntimeException ('hhjdf');
+//throw new RuntimeException ('hhjdf');
 
 
 
@@ -18,9 +18,7 @@ session_start();
                         exit();
                         }
                 ?>
-
-
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -103,7 +101,7 @@ session_start();
                                 </li>
 
                                 <li>
-                                    <a href="../examenes/gestionarExamenes.html">Examenes</a>
+                                    <a href="../examenes/gestionarExamenes.php">Examenes</a>
                                 </li>
 
                                 <li>

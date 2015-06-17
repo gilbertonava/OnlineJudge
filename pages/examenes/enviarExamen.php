@@ -35,7 +35,6 @@
 <body>
 
     <div id="wrapper">
-
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
             <div class="navbar-header">
@@ -50,7 +49,7 @@
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-                
+             
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
@@ -61,7 +60,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="../usuarios/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="../usuarios/login.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -73,11 +72,11 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                       
+                                                
                         <li class="active">
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Panel de Control<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                              <li>
+                               <li>
                                     <a href="../problemas/listar_proyecto.php">Proyectos</a>
                                 </li>
 
@@ -86,14 +85,14 @@
                                 </li>
 
                                 <li>
-                                    <a href="../materias/listarMateria_merce.html">Materias</a>
+                                    <a href="../materias/listarMateria_merce.php">Materias</a>
                                 </li>
 
                                 <li>
-                                    <a href="../usuarios/GestionarUsuario-joosuse.html">Usuarios</a>
+                                    <a href="../usuarios/GestionarUsuario-joosuse.php">Usuarios</a>
                                 </li>
                                 <li>
-                                    <a href="../usuarios/login.html">Login</a>
+                                    <a href="../usuarios/login.php">Login</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -110,37 +109,29 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-4 col-lg-12">
-                        <h1 class="page-header">Enviar Proyecto</h1>
+                        <h1 class="page-header">Enviar Examen</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- /.row -->
-
-                <div class="row">
-                    
-                        <img  height="200" width="200" class="img-thumbail col-md-offset-2 col-lg-offset-4" 
-                              src="../../static/images/project.png" />                   
-                    
+                <div class="row">                    
+                    <img class="img-thumbnail col-md-offset-2 col-lg-offset-4" 
+                         src="../../static/images/test.png" height="200" width="200" />                                       
                 </div> 
+                <h2></h2>
 
                 <div class="form-group">
                     <label class="control-label" for="rutaProyecto">Seleccione el Archivo del examen a enviar</label>
-                    <input type="file" id="rutaProyecto" class="form-control btn-outline btn-primary"
-                           accept=".java"/>
+                    <input type="file" id="rutaProyecto" class="form-control btn-outline btn-primary"/>
                 </div>
 
                 <div class="form-group" >
-                    <button type="button" id="cancel_enviarExamen" class="btn btn-outline btn-default">Cancelar</button>
+                    <button type="button" id="cancel_enviarExamen" 
+                            class="btn btn-outline btn-default">Cancelar</button>
                     <button type="button" id="enviarExamen" class="btn btn-outline btn-primary" 
-                            onclick="window.open('ResultadoProyecto -josuuse.html', '_self', 'false');" >Enviar Proyecto</button>
+                            onclick="window.open('resultadoExamen.php','_self','false')"  >Enviar Examen</button>
                 </div>
                
-
-                
-                
-
-
-
             </div>
             <!-- /.container-fluid -->
         </div>

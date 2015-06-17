@@ -1,4 +1,23 @@
-﻿<!DOCTYPE html>
+<?php 
+include '../../logs/errorLogging.php';
+//throw new RuntimeException ('hhjdf');
+session_start();
+                    
+                    if (!empty($_POST)){
+                         $ruta='../../_Examenes/'.$_POST['visualizar'].'.pdf';
+                         $nombre=$_POST['nombreProblema'];
+                    }
+                                        
+                    else{
+                        header('Location:../../pages/gestionarExamenes.php');
+                        exit();
+                        }
+                ?>
+
+
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -31,7 +50,6 @@
     <![endif]-->
 
 </head>
-
 <body>
 
     <div id="wrapper">
@@ -61,7 +79,7 @@
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                         </li>
                         <li class="divider"></li>
-                        <li><a href="../usuarios/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        <li><a href="../pages/usuarios/login.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                         </li>
                     </ul>
                     <!-- /.dropdown-user -->
@@ -73,27 +91,38 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
                        
                         <li class="active">
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Panel de Control<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                              <li>
-                                    <a href="../problemas/listar_proyecto.php">Proyectos</a>
+                               <li>
+                                    <a href="../pages/problemas/listar_proyecto.php">Proyectos</a>
                                 </li>
 
                                 <li>
-                                    <a href="../examenes/gestionarExamenes.php">Examenes</a>
+                                    <a href="../pages/examenes/gestionarExamenes.php">Examenes</a>
                                 </li>
 
                                 <li>
-                                    <a href="../materias/listarMateria_merce.html">Materias</a>
+                                    <a href="../pages/materias/listarMateria_merce.php">Materias</a>
                                 </li>
 
                                 <li>
-                                    <a href="../usuarios/GestionarUsuario-joosuse.html">Usuarios</a>
+                                    <a href="../pages/usuarios/GestionarUsuario-joosuse.php">Usuarios</a>
                                 </li>
                                 <li>
-                                    <a href="../usuarios/login.html">Login</a>
+                                    <a href="../pages/usuarios/login.php">Login</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -108,45 +137,53 @@
  <!-- Page Content -->
         <div id="page-wrapper">
             <div class="container-fluid">
+
                 <div class="row">
                     <div class="col-md-4 col-lg-12">
-                        <h1 class="page-header">Enviar Proyecto</h1>
+                        <h1 class="page-header"><?php echo $nombre; ?></h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- /.row -->
 
-                <div class="row">
-                    
-                        <img  height="200" width="200" class="img-thumbail col-md-offset-2 col-lg-offset-4" 
-                              src="../../static/images/project.png" />                   
-                    
-                </div> 
+				<div class="row">
 
-                <div class="form-group">
-                    <label class="control-label" for="rutaProyecto">Seleccione el Archivo del examen a enviar</label>
-                    <input type="file" id="rutaProyecto" class="form-control btn-outline btn-primary"
-                           accept=".java"/>
+				<div class="form-group col-md-4 text-left">
+
+                                <button class="btn  btn-outline btn-primary" id="delete" 
+                                        onclick="window.open('enviarExamen.php', '_self', 'false')">Enviar Solución</button>
+                            
                 </div>
+                    <div class="row text-right col-md-6">
+                        <div class="btn-group">
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-sm btn-circle btn-pinterest btn-success col-md-offset-2" 
+                                        id="return" onclick="window.open('gestionarExamenes.php', '_self', 'false')">
+                                    <i class="fa fa-arrow-circle-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div> 
+                    </div>
 
-                <div class="form-group" >
-                    <button type="button" id="cancel_enviarExamen" class="btn btn-outline btn-default">Cancelar</button>
-                    <button type="button" id="enviarExamen" class="btn btn-outline btn-primary" 
-                            onclick="window.open('ResultadoProyecto -josuuse.html', '_self', 'false');" >Enviar Proyecto</button>
-                </div>
-               
-
-                
-                
-
-
-
+                        <div class="row">
+                            <div class="col-md-6 col-lg-9">
+                                
+                                <h2></h2>
+                                <div id="portapdf"> 
+                                 <center>
+                                 <object data="<?php echo $ruta; ?>" type="application/pdf" width="800" height="900">
+                                 </object> </center>
+                                </div> 
+                                <h2></h2>
+                            </div>
+                            </div>
+                        </div> 
             </div>
             <!-- /.container-fluid -->
         </div>
  <!-- /#page-wrapper -->
 
-    </div>
     <!-- /#wrapper -->
 
     <!-- jQuery -->
@@ -159,8 +196,31 @@
     <script src="../../static/metisMenu/dist/metisMenu.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
+
+    <!-- DataTables JavaScript -->
+    <script src="../../static/DATA_TABLES/datatables/media/js/jquery.dataTables.min.js"></script>
+    <script src="../../static/DATA_TABLES/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
+  
+
+
+    <!-- Custom Theme JavaScript -->
     <script src="../../static/js/sb-admin-2.js"></script>
 
+    <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-example').DataTable({
+                responsive: true
+        });
+    });
+    </script>
+
+       
+
 </body>
+
+
+
 
 </html>
