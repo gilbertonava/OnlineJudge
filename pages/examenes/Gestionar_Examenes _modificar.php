@@ -1,4 +1,35 @@
-﻿<!DOCTYPE html>
+<?php
+include '../../modelo/examenController.php';
+//include '../../logs/errorLogging.php';
+
+if (isset($_SESSION['proyectoInsertado'])) {
+
+
+    #all is right!
+    if ($_SESSION['proyectoInsertado'] == 'true') {
+        echo ' <div class="alert alert-success alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                El proyecto se registro correctamente !
+                            </div>';
+
+        unset($_SESSION['proyectoInsertado']);
+        unset($_FILES['rutaProyecto']);
+    }
+    #something was wrong
+    else if ($_SESSION['proyectoInsertado'] == 'false') {
+        echo ' <div class="alert alert-danger alert-dismissable">
+                                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                No fue posible registrar el proyecto  <a href="#" class="alert-link">Alert Link</a>.
+                            </div>';
+        unset($_SESSION['proyectoInsertado']);
+        unset($_FILES['rutaProyecto']);
+    }
+}
+
+
+
+?>
+<!DOCTYPE html>
 <html lang="en">
 
     <head>
@@ -33,12 +64,6 @@
     </head>
 
     <body>
-
-
-
-
-
-
         <!--confirmation dialog-->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal-label" aria-hidden="true">
             <div class="modal-dialog">
@@ -85,7 +110,7 @@
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="../usuarios/login.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li><a href="../usuarios/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
                         </ul>
                         <!-- /.dropdown-user -->
@@ -97,39 +122,28 @@
                 <div class="navbar-default sidebar" role="navigation">
                     <div class="sidebar-nav navbar-collapse">
                         <ul class="nav" id="side-menu">
-                            <li class="sidebar-search">
-                                <div class="input-group custom-search-form">
-                                    <input type="text" class="form-control" placeholder="Search...">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </span>
-                                </div>
-                                <!-- /input-group -->
-                            </li>
 
                             <li class="active">
                                 <a href="#"><i class="fa fa-files-o fa-fw"></i> Panel de Control<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="../problemas/listar_proyecto.php">Proyectos</a>
-                                </li>
+                                    <li>
+                                        <a href="../problemas/listar_proyecto.php">Proyectos</a>
+                                    </li>
 
-                                <li>
-                                    <a href="../examenes/gestionarExamenes.php">Examenes</a>
-                                </li>
+                                    <li>
+                                        <a href="../examenes/gestionarExamenes.php">Examenes</a>
+                                    </li>
 
-                                <li>
-                                    <a href="../materias/listarMateria_merce.php">Materias</a>
-                                </li>
+                                    <li>
+                                        <a href="../materias/listarMateria_merce.html">Materias</a>
+                                    </li>
 
-                                <li>
-                                    <a href="../usuarios/GestionarUsuario-joosuse.php">Usuarios</a>
-                                </li>
-                                <li>
-                                    <a href="../usuarios/login.php">Login</a>
-                                </li>
+                                    <li>
+                                        <a href="../usuarios/GestionarUsuario-joosuse.html">Usuarios</a>
+                                    </li>
+                                    <li>
+                                        <a href="../usuarios/login.html">Login</a>
+                                    </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
@@ -146,104 +160,146 @@
 
                     <div class="row">
                         <div class="col-md-4 col-lg-12">
-                            <h1 class="page-header">Agregar Examen</h1>
+                            <h1 class="page-header">Datos Examen</h1>
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
                     <!-- /.row -->
-
-                    <div class="tab-content" data-target="#tabGestionMateria"> <!--empieza -->
-
+                    <div class="row text-right">
+                        <div class="btn-group">
+                            <div class="btn-group" role="group">
+                                <button class="btn btn-sm btn-circle btn-pinterest btn-success col-md-offset-2" 
+                                        id="return" onclick="window.open('gestionarExamenes.php', '_self', 'false')">
+                                    <i class="fa fa-arrow-circle-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--empieza -->
                         <div class=" active tab-pane fade in" id="registrarMateria">
-
                             <div class="row">
+                                <h2></h2>
                                 <div class="col-md-6 col-lg-9">
-                                    <div class="row text-right">
-                                        <div class="btn-group">
-                                            <div class="btn-group" role="group">
-                                                <button class="btn btn-sm btn-circle btn-pinterest btn-success col-md-offset-2" 
-                                                        id="return" onclick="window.open('gestionarExamenes.php', '_self', 'false')">
-                                                    <i class="fa fa-arrow-circle-left"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <br>
                                     <div class="panel panel-primary">
                                         <div class="panel-heading">Proporcione los datos del examen</div>
-
-
                                         <div class="panel-body">
-                                            <form role="form">
+                                            <form role="form" enctype="multipart/form-data" action="" method="POST" >    
+                                                <div class="row">
+                                                    <div class=" form-group col-md-6">
+                                                        <label for="materia" class="control-label ">Materia</label>
+                                                        <select class="form-control" id="idMateria" name="idMateria" required>
+                                                            <?php
+                                                            //<?php echo $_SERVER['PHP_SELF']; 
+                                                            $get_materias = new gestionExamenes();
 
-                                                <div class="form-group">
-                                                    <label class="control-label" for="nombreExamen">Nombre del examen</label>
-                                                    <input type="text" class="form-control" id="nombreExamen" placeholder="examen" required>
+                                                            $options = $get_materias->getMaterias();
+
+                                                            foreach ($options as $val => $label) {
+
+                                                                echo '<option value=' . $label['idMateria'] . '>' . $label['nombre'] . '</option>';
+                                                            }
+                                                            ?>
+                                                        </select>
+                                                    </div><br>
+
+                                                    <div class="form-group  col-md-4">                                                        
+                                                        <a class="btn btn-primary btn-pinterest btn-outline" href="../materias/crearMateria_merce.html">Nueva Materia</a>                                                                                                               
+                                                    </div>
                                                 </div>
 
+
                                                 <div class=" form-group">
-                                                    <label for="unidades" class="control-label">Unidad</label>
-                                                    <select class="form-control" id="unidades">
-                                                        <option id="unidad1">Unidad 1</option>
-                                                        <option id="unidadn">Unidad 2</option>
-                                                        <option id="unidadn">Unidad 3</option>
-                                                        <option id="unidadn">Unidad 4</option>
-                                                        <option id="unidadn">Unidad 5</option>
-                                                        <option id="unidadn">Unidad 6</option>
-                                                        <option id="unidadn">Unidad 7</option>
-                                                        <option id="unidadn">Unidad 8</option>
+                                                    <label for="unidad" class="control-label">Unidad</label>
+                                                    <select class="form-control" id="unidad" name="unidad" required>
+                                                        <option value="1">Unidad 1</option>
+                                                        <option value="2">Unidad 2</option>
+                                                        <option value="3">Unidad 3</option>
+                                                        <option value="4">Unidad 4</option>
+                                                        <option value="5">Unidad 5</option>
+                                                        <option value="6">Unidad 6</option>
+                                                        <option value="7">Unidad 7</option>
+                                                        <option value="8">Unidad 8</option>
                                                     </select>
                                                 </div>
 
                                                 <div class="form-group">
-                                                    <label>Ruta del archivo</label>
+                                                    <label class="control-label" for="rutaExamen">Archivo (PDF) del Examen  <b>size < 3.1MB</b>></label>
+                                                    <input type="file" id="rutaExamen" 
+                                                           name="rutaExamen" 
+                                                           class="form-control btn-outline btn-primary" 
+                                                           required accept="application/pdf" 
+                                                           >
+                                                </div>
 
-                                                    <input type="file">
+
+                                                <div class="form-group">
+                                                    <label class="control-label"
+                                                           for="fecha">Fecha Aplicacion</label>
+                                                    <input type="date" name="fechaAplicacion" required>
+
                                                 </div>
                                                 <div class="form-group">
-                                                </div>
-
-
-                                                <div class="form-group">
-                                                    <label class="control-label" 
-                                                           for="fecha">Fecha</label>
-                                                    <input type="date" name="fecha">
-
-                                                </div>
-                                                <div class="form-group">
-                                                    <label class="control-label" 
-                                                           for="fecha">Hora de inicio</label>
-                                                    <input type="time" name="hora">
-                                                    <label class="control-label" 
+                                                    <label class="control-label"
+                                                           for="fecha" >Hora de inicio</label>
+                                                    <input type="time" name="horaInicio" required>
+                                                    <label class="control-label"
                                                            for="fecha">Hora de terminación</label>
-                                                    <input type="time" name="hora">
-                                                </div>
+                                                    <input type="time" name="horaFin" required>
+                                                </div> 
 
 
-                                                <div class=" form-group col-md-offset-3" align ="right">
-                                                    <button type="submit" id="btn-cancel-registrarMateria" 
-                                                            class="btn btn-outline btn-danger">Cancelar</button>
-                                                    <button type="submit" id="btn-registrarMateria" class="btn btn-outline btn-primary">Registrar</button>
+                                                <div class="col-md-offset-3" align="right">
+                                                    <a id="btn-cancel-registrarMateria" class="btn btn-outline btn-danger">Cancelar</a>
+                                                    <button type="submit" id="registrarMateria" name="registrarMateria" value="enviar" class="btn btn-outline btn-primary">Registrar</button>
                                                 </div>
 
                                             </form>
-                                        </div> 
-                                    </div>
-                                    <!--</div> --> 
-                                    <BR>
 
+
+                                        </div>
+                                    </div>
+
+
+                                    <!--</div> -->
+                                    <!-- /.panel-body -->
                                 </div>
+                                <!-- /.panel -->
                             </div>
-                            <!-- /.container-fluid -->
                         </div>
-                        <!-- /#page-wrapper -->
                     </div>
-                </div>
+                </div> <!-- termina lo de la pestaña agregar examen-->
+
             </div>
+            <!-- /.container-fluid -->
         </div>
+        <!-- /#page-wrapper -->
+        <?php
+        if(!empty($_POST)){
+        if (@$_POST['registrarMateria']) {
+
+/*            
+              $query = "INSERT INTO examen values(null,'".$_FILES['rutaExamen']['tmp_name']."','".$_POST['unidad']."','".$_POST['fechaAplicacion']."','"
+                    .$_POST['horaInicio']."','".$_POST['horaFin']."','".$_POST['idMateria']."','ACTIVO');";
+
+                    
+                    echo $query;
+                    die();
+ * */
+ 
+            $new_examen = new gestionExamenes();
+
+            if ($new_examen->nuevoExamen($_POST)) {
+                echo '<pre>SE INSERTO</PRE>';
+            }
+        }
+        }
+        ?>
         <!-- /#wrapper -->
+
         <!-- jQuery -->
         <script src="../../static/js/jquery.min.js"></script>
+
         <!-- Bootstrap Core JavaScript -->
         <script src="../../static/js/bootstrap.min.js"></script>
 
@@ -252,30 +308,12 @@
 
         <!-- Custom Theme JavaScript -->
 
-        <!-- DataTables JavaScript -->
+        <!-- DataTables JavaScript 
         <script src="../../static/DATA_TABLES/datatables/media/js/jquery.dataTables.min.js"></script>
         <script src="../../static/DATA_TABLES/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
-
-
-
+        -->
 
         <!-- Custom Theme JavaScript -->
         <script src="../../static/js/sb-admin-2.js"></script>
-
-        <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-        <script>
-                                                    $(document).ready(function () {
-                                                        $('#dataTables-example').DataTable({
-                                                            responsive: true
-                                                        });
-                                                    });
-        </script>
-
-
-
     </body>
-
-
-
-
 </html>

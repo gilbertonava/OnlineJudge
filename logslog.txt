@@ -93,3 +93,204 @@
 2015-06-17 06:09:19 (CEST)      in_array() expects parameter 2 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
 2015-06-17 06:09:19 (CEST)      Undefined variable: verify C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
 2015-06-17 06:09:19 (CEST)      in_array() expects parameter 2 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 225
+2015-06-17 17:19:33 (CEST)      mysqli::mysqli():  C:\wamp\www\OnlineJudge\modelo\dbconnection.php 25
+2015-06-17 17:19:33 (CEST)      mysqli::set_charset(): Couldn't fetch mysqli C:\wamp\www\OnlineJudge\modelo\dbconnection.php 26
+2015-06-17 17:52:49 (CEST)      Undefined index: agregar C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-17 17:57:37 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 211
+2015-06-17 18:01:29 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 211
+2015-06-17 18:02:06 (CEST)      Undefined index: materia C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 9
+2015-06-17 18:02:06 (CEST)      Undefined index: unidad C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 9
+2015-06-17 18:02:06 (CEST)      Undefined index: seleccion C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 18:02:06 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 18:05:10 (CEST)      Undefined index: materia C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 9
+2015-06-17 18:05:10 (CEST)      Undefined index: unidad C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 9
+2015-06-17 18:05:10 (CEST)      Undefined index: materia C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 255
+2015-06-17 18:05:10 (CEST)      Undefined index: unidad C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 256
+2015-06-17 18:05:10 (CEST)      Undefined index: seleccion C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 18:05:10 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 18:05:22 (CEST)      Undefined index: seleccion C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 18:05:22 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 19:50:37 (CEST)      Undefined index: seleccion C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 19:50:37 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 19:50:41 (CEST)      Undefined index: seleccion C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 19:50:41 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 19:51:57 (CEST)      Undefined index: seleccion C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 19:51:57 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 19:53:03 (CEST)      Undefined index: seleccion C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 19:58:09 (CEST)      Undefined index: seleccion C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 19:58:15 (CEST)      Undefined index: seleccion C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 19:58:19 (CEST)      Undefined index: seleccion C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 20:03:11 (CEST)      Undefined index: seleccion C:\wamp\www\OnlineJudge\modelo\examenController.php 194
+2015-06-17 20:03:11 (CEST)      Cannot modify header information - headers already sent by (output started at C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php:151) C:\wamp\www\OnlineJudge\logs\errorLogging.php 13
+2015-06-17 20:04:55 (CEST)      Undefined index: seleccion C:\wamp\www\OnlineJudge\modelo\examenController.php 194
+2015-06-17 20:04:55 (CEST)      Undefined variable: code C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 20:04:55 (CEST)      Undefined variable: previous C:\wamp\www\OnlineJudge\modelo\examenController.php 196
+2015-06-17 20:06:08 (CEST)      Undefined index: seleccion C:\wamp\www\OnlineJudge\modelo\examenController.php 194
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:52:31 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:52:36 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:19 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:23 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 01:54:24 (CEST)      Undefined index: idproyecto C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:14 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:00:18 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 260
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 261
+2015-06-18 02:01:01 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 262
+2015-06-18 02:50:35 (CEST)      require_once(../logs/errorLogging.php): failed to open stream: No such file or directory C:\wamp\www\OnlineJudge\modelo\examenController.php 5
+2015-06-18 03:15:09 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 242
+2015-06-18 03:18:03 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 245
+2015-06-18 05:05:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 58
+2015-06-18 05:05:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 235
+2015-06-18 05:06:49 (CEST)      Undefined index: registrarProyecto C:\wamp\www\OnlineJudge\pages\problemas\gp_nuevo_proyecto.php 235
