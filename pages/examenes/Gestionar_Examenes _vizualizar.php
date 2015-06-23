@@ -12,9 +12,6 @@ if (!empty($_POST)) {
 }
 ?>
 
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -155,14 +152,7 @@ if (!empty($_POST)) {
                         <div class="row text-right col-md-6">
                             <div class="btn-group">
                                 <div class="btn-group" role="group">
-
-                                    <button  type="button" class="btn btn-sm btn-danger"  value="<?php echo ' ' . $value['idexamen']; ?>" 
-                                             id="btn_delete_<?php echo $value['idexamen']; ?>" name="elimiar_pro"
-                                             onclick="$('#idTo').val($('#btn_delete_<?php echo $value['idexamen']; ?>').attr('value'));
-                                                                                                 $('#myModal').modal('show');">
-                                        <i class="glyphicon glyphicon-remove"></i>
-                                    </button>
-
+                                                                      
                                     <button class="btn btn-sm btn-circle btn-pinterest btn-success col-md-offset-2" 
                                             id="return" onclick="window.open('gestionarExamenes.php', '_self', 'false')">
                                         <i class="fa fa-arrow-circle-left"></i>

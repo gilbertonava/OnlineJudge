@@ -276,17 +276,7 @@ if (isset($_SESSION['proyectoInsertado'])) {
         <!-- /#page-wrapper -->
         <?php
         if(!empty($_POST)){
-        if (@$_POST['registrarMateria']) {
-
-/*            
-              $query = "INSERT INTO examen values(null,'".$_FILES['rutaExamen']['tmp_name']."','".$_POST['unidad']."','".$_POST['fechaAplicacion']."','"
-                    .$_POST['horaInicio']."','".$_POST['horaFin']."','".$_POST['idMateria']."','ACTIVO');";
-
-                    
-                    echo $query;
-                    die();
- * */
- 
+        if (isset($_POST['registrarMateria'])) {
             $new_examen = new gestionExamenes();
 
             if ($new_examen->nuevoExamen($_POST)) {

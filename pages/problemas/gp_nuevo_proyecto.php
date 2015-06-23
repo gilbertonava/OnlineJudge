@@ -232,12 +232,15 @@ if (isset($_SESSION['proyectoInsertado'])) {
         <!-- /#wrapper -->
 
 <?php
-if (@$_POST['registrarProyecto']) {
+if (!empty($_POST)) {
+    
+
+if (isset($_POST['registrarProyecto'])) {
     $registro = new GestionProyecto();
     $registro->RegistrarProyecto($_POST);
     //echo $_SERVER['PHP_SELF'];
     
-    
+}    
 } 
 ?>
 

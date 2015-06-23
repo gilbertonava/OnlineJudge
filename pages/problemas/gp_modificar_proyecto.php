@@ -7,21 +7,22 @@ session_start();
 $row = NULL;
 
 if (!empty($_POST)) {
-        if (isset($_POST['editar'])) {
-            try {
-                    $edicion=new GestionProyecto();
-                    $row = $edicion->getProjectData($_POST['editar']);
+    if (isset($_POST['editar'])) {
+        try {
+            $edicion = new GestionProyecto();
+            $row = $edicion->getProjectData($_POST['editar']);
 
-                    if (count($row) == 0) {
-                        header('Location:../problemas/listar_proyecto.php');
-                    }
-                } catch (RuntimeException $e) {
-                header('Location:../pages/problemas/listar_proyectos.php'); }
-        }
-    } else {
-                header('Location:../pages/problemas/listar_proyecto.php');
-                exit();
+            if (count($row) == 0) {
+                header('Location:../problemas/listar_proyecto.php');
             }
+        } catch (RuntimeException $e) {
+            header('Location:../pages/problemas/listar_proyectos.php');
+        }
+    }
+} else {
+    header('Location:../pages/problemas/listar_proyecto.php');
+    exit();
+}
 
 if ($row == NULL) {
     header('Location:../problemas/listar_proyecto.php');
@@ -167,7 +168,7 @@ if ($row == NULL) {
 
                                     <form role="form" method="POST" enctype="multipart/form-data" 
                                           action="<?php echo $_SERVER['PHP_SELF']; ?>">
-                                              <?php foreach ($row as $value) { ?>
+<?php foreach ($row as $value) { ?>
                                             <div class="form-group">
                                                 <label class="control-label" for="nombreProyecto">Nombre del proyecto</label>
                                                 <input type="text" class="form-control" id="nombreProyecto" 
@@ -267,13 +268,14 @@ if ($row == NULL) {
                     </div>
 
                     <?php
-                    if (@$_POST['id']) {
-                        $actualizar = new GestionProyecto();
-                        $actualizar->actualizarProyecto($_POST);
-
-                        echo '<pre>';
-                        print_r($_POST);
-                        echo '</pre>';
+                    if (!empty($_POST)) {
+                        if (isset($_POST['id'])) {
+                            $actualizar = new GestionProyecto();
+                            $actualizar->actualizarProyecto($_POST);
+                            echo '<pre>';
+                            print_r($_POST);
+                            echo '</pre>';
+                        }
                     }
                     ?>
                 </div>

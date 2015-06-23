@@ -294,3 +294,93 @@
 2015-06-18 05:05:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 58
 2015-06-18 05:05:08 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 235
 2015-06-18 05:06:49 (CEST)      Undefined index: registrarProyecto C:\wamp\www\OnlineJudge\pages\problemas\gp_nuevo_proyecto.php 235
+2015-06-18 18:54:28 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 156
+2015-06-18 18:54:28 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 157
+2015-06-18 18:54:28 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 158
+2015-06-18 18:54:49 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 156
+2015-06-18 18:54:49 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 157
+2015-06-18 18:54:49 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 158
+2015-06-18 19:10:32 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 308
+2015-06-18 20:53:55 (CEST)      Undefined variable: row C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 192
+2015-06-18 20:53:55 (CEST)      Undefined variable: row C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 192
+2015-06-18 20:53:55 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 308
+2015-06-18 20:56:14 (CEST)      Undefined variable: row C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 192
+2015-06-18 20:56:14 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 308
+2015-06-18 20:57:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 192
+2015-06-18 20:57:21 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 308
+2015-06-18 20:57:57 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 194
+2015-06-18 20:57:57 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 310
+2015-06-18 21:05:23 (CEST)      Undefined index: unidad C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 194
+2015-06-18 21:05:23 (CEST)      Undefined index: nombre C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 194
+2015-06-18 21:05:23 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 310
+2015-06-19 02:20:52 (CEST)      Undefined index: unidad C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 194
+2015-06-19 02:20:52 (CEST)      Undefined index: nombre C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 194
+2015-06-19 02:20:52 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 310
+2015-06-19 02:27:58 (CEST)      Undefined variable: array C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:27:58 (CEST)      array_column() expects parameter 1 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:27:58 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 310
+2015-06-19 02:28:04 (CEST)      Undefined variable: array C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:04 (CEST)      array_column() expects parameter 1 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:04 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 310
+2015-06-19 02:28:05 (CEST)      Undefined variable: array C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:05 (CEST)      array_column() expects parameter 1 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:05 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 310
+2015-06-19 02:28:06 (CEST)      Undefined variable: array C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:06 (CEST)      array_column() expects parameter 1 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:06 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 310
+2015-06-19 02:28:07 (CEST)      Undefined variable: array C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:07 (CEST)      array_column() expects parameter 1 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:07 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 310
+2015-06-19 02:28:08 (CEST)      Undefined variable: array C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:08 (CEST)      array_column() expects parameter 1 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:08 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 310
+2015-06-19 02:28:09 (CEST)      Undefined variable: array C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:09 (CEST)      array_column() expects parameter 1 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:09 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 310
+2015-06-19 02:28:14 (CEST)      Undefined variable: array C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:14 (CEST)      array_column() expects parameter 1 to be array, null given C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 17
+2015-06-19 02:28:14 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 310
+2015-06-19 02:30:01 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 312
+2015-06-19 05:05:33 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 314
+2015-06-19 05:06:29 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 314
+2015-06-19 05:10:58 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 307
+2015-06-19 05:12:10 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 307
+2015-06-19 05:12:15 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 307
+2015-06-19 05:13:38 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 308
+2015-06-19 05:13:40 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 308
+2015-06-19 05:20:02 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 311
+2015-06-19 05:20:42 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 311
+2015-06-19 05:22:00 (CEST)      Undefined index: id C:\wamp\www\OnlineJudge\pages\problemas\gp_modificar_proyecto.php 270
+2015-06-19 05:28:55 (CEST)      Undefined index: id C:\wamp\www\OnlineJudge\pages\problemas\gp_modificar_proyecto.php 270
+2015-06-19 05:29:06 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 316
+2015-06-19 05:30:32 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 316
+2015-06-19 05:30:34 (CEST)      Undefined index: registrarMateria C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 316
+2015-06-19 06:08:37 (CEST)      Undefined index: editar C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 289
+2015-06-19 06:10:56 (CEST)      Undefined index: editar C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 289
+2015-06-19 06:12:43 (CEST)      Undefined index: editar C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 289
+2015-06-19 06:18:13 (CEST)      Undefined index: editar C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 289
+2015-06-19 06:19:22 (CEST)      Undefined index: editar C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 289
+2015-06-19 06:25:47 (CEST)      Invalid argument supplied for foreach() C:\wamp\www\OnlineJudge\pages\problemas\gp_modificar_proyecto.php 171
+2015-06-19 06:25:47 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\modelo\proyecto.php 331
+2015-06-19 06:25:47 (CEST)      Cannot modify header information - headers already sent by (output started at C:\wamp\www\OnlineJudge\pages\problemas\gp_modificar_proyecto.php:170) C:\wamp\www\OnlineJudge\modelo\proyecto.php 333
+2015-06-19 06:29:12 (CEST)      Undefined index: editar C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php 289
+2015-06-19 06:44:28 (CEST)      Cannot modify header information - headers already sent by (output started at C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php:195) C:\wamp\www\OnlineJudge\logs\errorLogging.php 13
+2015-06-22 03:18:44 (CEST)      Cannot modify header information - headers already sent by (output started at C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php:195) C:\wamp\www\OnlineJudge\logs\errorLogging.php 13
+2015-06-22 03:31:11 (CEST)      Cannot modify header information - headers already sent by (output started at C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php:195) C:\wamp\www\OnlineJudge\logs\errorLogging.php 13
+2015-06-22 03:45:22 (CEST)      Cannot modify header information - headers already sent by (output started at C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php:195) C:\wamp\www\OnlineJudge\logs\errorLogging.php 13
+2015-06-22 03:45:26 (CEST)      Cannot modify header information - headers already sent by (output started at C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _modificar.php:195) C:\wamp\www\OnlineJudge\logs\errorLogging.php 13
+2015-06-23 04:43:46 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 156
+2015-06-23 04:43:46 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 157
+2015-06-23 04:43:46 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 158
+2015-06-23 04:43:53 (CEST)      unlink(../_Examenes/null.pdf): No such file or directory C:\wamp\www\OnlineJudge\modelo\eliminar_examen.php 28
+2015-06-23 04:43:59 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 156
+2015-06-23 04:43:59 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 157
+2015-06-23 04:43:59 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 158
+2015-06-23 04:44:05 (CEST)      unlink(../_Examenes/C:wamp	mpphp756D.tmp.pdf): No such file or directory C:\wamp\www\OnlineJudge\modelo\eliminar_examen.php 28
+2015-06-23 04:44:11 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 156
+2015-06-23 04:44:11 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 157
+2015-06-23 04:44:11 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 158
+2015-06-23 04:44:16 (CEST)      unlink(../_Examenes/C:wamp	mpphp756D.tmp.pdf): No such file or directory C:\wamp\www\OnlineJudge\modelo\eliminar_examen.php 28
+2015-06-23 04:54:25 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 156
+2015-06-23 04:54:25 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 157
+2015-06-23 04:54:25 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 158

@@ -2,6 +2,38 @@
 include '../../modelo/examenController.php';
 //include '../../logs/errorLogging.php';
 
+$examenData = NULL;
+$materias = NULL;
+
+#obtener los datos del examen que se edita
+if (!empty($_POST)) {
+    if (isset($_POST['editar'])) {
+        try {
+            $edicion = new gestionExamenes();
+            $resul = $edicion->getExamenData($_POST['editar'], $_POST['idmateria']);
+            $materias = $edicion->getMaterias();
+
+            if (!empty($resul)) {
+                for ($index = 0; $index < count($resul); $index++) {
+                    $examenData = $resul[$index];
+                }
+            }
+        } catch (RuntimeException $e) {
+           @ header('Location:../pages/examenes/gestionarExamenes.php');
+        }
+    }
+} else {
+   @ header('Location:../pages/examenes/gestionarExamenes.php');
+   exit();
+}
+
+if ($examenData == NULL) {
+    @header('Location:../examenes/gestionarExamenes.php');
+}
+
+//----------------------------------------------------------
+
+
 if (isset($_SESSION['proyectoInsertado'])) {
 
 
@@ -25,9 +57,6 @@ if (isset($_SESSION['proyectoInsertado'])) {
         unset($_FILES['rutaProyecto']);
     }
 }
-
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -160,7 +189,9 @@ if (isset($_SESSION['proyectoInsertado'])) {
 
                     <div class="row">
                         <div class="col-md-4 col-lg-12">
-                            <h1 class="page-header">Datos Examen</h1>
+                            <h4 class="page-header">
+                                <?php echo 'Editando examen de la Unidad <b>' . $examenData['unidad'] . '</b> de ' . $examenData['nombre']; ?>
+                            </h4>
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
@@ -190,16 +221,10 @@ if (isset($_SESSION['proyectoInsertado'])) {
                                                         <label for="materia" class="control-label ">Materia</label>
                                                         <select class="form-control" id="idMateria" name="idMateria" required>
                                                             <?php
-                                                            //<?php echo $_SERVER['PHP_SELF']; 
-                                                            $get_materias = new gestionExamenes();
-
-                                                            $options = $get_materias->getMaterias();
-
-                                                            foreach ($options as $val => $label) {
-
-                                                                echo '<option value=' . $label['idMateria'] . '>' . $label['nombre'] . '</option>';
-                                                            }
+                                                            echo '<option value="' . $examenData['idMateria'] . '" selected>'
+                                                            . $examenData['nombre'] . '</option>';
                                                             ?>
+
                                                         </select>
                                                     </div><br>
 
@@ -212,44 +237,55 @@ if (isset($_SESSION['proyectoInsertado'])) {
                                                 <div class=" form-group">
                                                     <label for="unidad" class="control-label">Unidad</label>
                                                     <select class="form-control" id="unidad" name="unidad" required>
-                                                        <option value="1">Unidad 1</option>
-                                                        <option value="2">Unidad 2</option>
-                                                        <option value="3">Unidad 3</option>
-                                                        <option value="4">Unidad 4</option>
-                                                        <option value="5">Unidad 5</option>
-                                                        <option value="6">Unidad 6</option>
-                                                        <option value="7">Unidad 7</option>
-                                                        <option value="8">Unidad 8</option>
+
+                                                        <?php
+                                                        for ($index1 = 1; $index1 < 9; $index1++) {
+                                                            echo ' <option value="' . $index1 . '"';
+
+                                                            if ($index1 == $examenData['unidad']) {
+                                                                echo ' selected ';
+                                                            } 
+                                                            echo ' > Unidad ' . $index1 . '</option>';
+                                                            
+                                                        }
+                                                        ?>
+
                                                     </select>
                                                 </div>
 
                                                 <div class="form-group">
                                                     <label class="control-label" for="rutaExamen">Archivo (PDF) del Examen  <b>size < 3.1MB</b>></label>
+                                                     <p class="text-info">Current file: &nbsp;<?php echo $examenData['rutaArchivo']; ?> </p>
                                                     <input type="file" id="rutaExamen" 
                                                            name="rutaExamen" 
                                                            class="form-control btn-outline btn-primary" 
-                                                           required accept="application/pdf" 
-                                                           >
+                                                           accept="application/pdf" >
                                                 </div>
 
 
                                                 <div class="form-group">
                                                     <label class="control-label"
                                                            for="fecha">Fecha Aplicacion</label>
-                                                    <input type="date" name="fechaAplicacion" required>
+                                                    <input type="date" name="fechaAplicacion" required 
+                                                           value="<?php echo $examenData['fechaAplicacion']; ?>"
+                                                           >
 
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label"
                                                            for="fecha" >Hora de inicio</label>
-                                                    <input type="time" name="horaInicio" required>
+                                                    <input type="time" name="horaInicio" required
+                                                           value="<?php echo $examenData['horaInicio']; ?>">
                                                     <label class="control-label"
                                                            for="fecha">Hora de terminación</label>
-                                                    <input type="time" name="horaFin" required>
+                                                    <input type="time" name="horaFin" required
+                                                            value="<?php echo $examenData['horaFin']; ?>">
                                                 </div> 
 
 
                                                 <div class="col-md-offset-3" align="right">
+                                                     <input type="hidden" name="id" value="<?php echo $examenData['idexamen']; ?>"/>
+                                                    <input type="hidden" name="oldfile" value="<?php echo $examenData['rutaArchivo']; ?>"/>
                                                     <a id="btn-cancel-registrarMateria" class="btn btn-outline btn-danger">Cancelar</a>
                                                     <button type="submit" id="registrarMateria" name="registrarMateria" value="enviar" class="btn btn-outline btn-primary">Registrar</button>
                                                 </div>
@@ -275,25 +311,24 @@ if (isset($_SESSION['proyectoInsertado'])) {
         </div>
         <!-- /#page-wrapper -->
         <?php
-        if(!empty($_POST)){
-        if (@$_POST['registrarMateria']) {
+        if (!empty($_POST)) {
+            if (isset($_POST['registrarMateria'])) {
+             
+                $edite_examen = new gestionExamenes();
 
-/*            
-              $query = "INSERT INTO examen values(null,'".$_FILES['rutaExamen']['tmp_name']."','".$_POST['unidad']."','".$_POST['fechaAplicacion']."','"
-                    .$_POST['horaInicio']."','".$_POST['horaFin']."','".$_POST['idMateria']."','ACTIVO');";
-
-                    
-                    echo $query;
-                    die();
- * */
- 
-            $new_examen = new gestionExamenes();
-
-            if ($new_examen->nuevoExamen($_POST)) {
-                echo '<pre>SE INSERTO</PRE>';
+                 
+                  
+                echo '<div class="jumbotron">';
+                
+                echo $edite_examen->editarExamen($_POST);
+                print_r($_POST);
+               echo '</div>';
+                
             }
+             
         }
-        }
+        
+        
         ?>
         <!-- /#wrapper -->
 

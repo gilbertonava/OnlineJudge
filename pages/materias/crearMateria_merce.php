@@ -45,12 +45,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../pages/index.html"> Juez en Linea ITSMante </a>
+                <a class="navbar-brand" href="../pages/index.html">  </a>
             </div>
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-                
+               
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
@@ -73,9 +73,9 @@
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
-                                               
-                        <li class="active">
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Panel de Control<span class="fa arrow"></span></a>
+                                                
+                        <li>
+                            <a href="#"><i class="fa fa-files-o fa-fw"></i>Panel de Control<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                <li>
                                     <a href="../problemas/listar_proyecto.php">Proyectos</a>
@@ -95,6 +95,7 @@
                                 <li>
                                     <a href="../usuarios/login.html">Login</a>
                                 </li>
+
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -105,35 +106,32 @@
             <!-- /.navbar-static-side -->
         </nav>
 
- <!-- Page Content -->
+        
         <div id="page-wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-4 col-lg-12">
-                        <h1 class="page-header">Gestión de Materias</h1>
+                        <h1 class="page-header">Nueva Materia</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- /.row -->
-
-                <div class="row">
-                    <ul class="nav nav-tabs" role="navigation" id="tabGestionMateria">
-                        <li class="active"><a href="#registrarMateria" role="tab" data-toggle="tab">Registrar Materia</a></li>
-                        <li><a href="#modificarMateria" role="tab" data-toggle="tab">Modificar Materia</a></li>
-                        <li><a href="#eliminarMateria" role="tab" data-toggle="tab">Eliminar Materia</a></li>
-                    </ul>
-                </div>
-
-
-                <div class="tab-content" data-target="#tabGestionMateria">
-                    
-                    <div class=" active tab-pane fade in" id="registrarMateria">
-                        
-                        <div class="row">
-                            <h2></h2>
                             
 
-                            <div class="col-md-6 col-lg-9">
+                <div class="col-md-6 col-lg-9">
+
+                                    <div class="row text-right">
+                                       <div class="btn-group">
+                                        <div class="btn-group" role="group">
+                                            <button class="btn btn-sm btn-circle btn-pinterest btn-success 
+                                                    col-md-offset-2" id="return" onclick="window.open('listarMateria_merce.html', '_self', 'false')">
+                                                <i class="fa fa-arrow-circle-left"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div >
+
+
                                 <div class="panel panel-primary">
                                     <div class="panel-heading">Proporcione los datos de la materia</div>
                                     <div class="panel-body">
@@ -160,107 +158,7 @@
                                         </form>
                                     </div>
                                 </div>
-                          
-                        </div>
-                    </div>
-                  </div>
-
-
-                    <div class="tab-pane fade in" id="modificarMateria">
-                        <div class="row">
-                            <h2></h2>
-                            <div class="col-md-6 col-lg-9">
-
-                                <div class=" form-group">
-                                    <label for="listaMateria" class="control-label">Seleccione la materia a modificar</label>
-                                    <select class="form-control" id="listaMateria">
-                                        <option id="materia1">Materia 1</option> 
-                                        <option id="materiaN">Materia i</option>    
-                                    
-                                    
-                                    </select>
-                                </div>
-
-                                <h2></h2>
-                                <div class="panel panel-primary">
-                                    <div class="panel-heading">
-                                        Cambie los datos necesarios
-                                    </div>
-                                    <div class="panel-body">
-                                        <form role="form">
-                                            <div class="form-group">
-                                                <label class="control-label" for="nombreMateria">Nuevo nombre de la materia</label>
-                                                <input type="text" class="form-control" id="nombreMateria" placeholder="Materia" required>
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label class="control-label" for="nombreCreditos">Nuevo número de creditos</label>
-                                                <input type="number" class="form-control" id="numeroCreditos" placeholder="Creditos" required min="0">
-                                            </div>
-
-                                            <div class="form-group">
-                                                <label class="control-label" for="numeroSemestre">Semestre</label>
-                                                <input type="number" class="form-control" id="numeroSemestre" placeholder="Semestre" required min="0">
-                                            </div>
-
-                                            <div class=" form-group col-md-offset-3">
-                                                <button type="submit" id="btn-cancel-registrarMateria" class="btn btn-outline btn-default">Cancelar</button>
-                                                <button type="submit" id="btn-registrarMateria" class="btn btn-outline btn-primary">Cambiar</button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    
-                                </div>
-                                
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-
-                    <div class="tab-pane fade in" id="eliminarMateria">
-
-                        <div class="row">
-                            <div class="col-md-6 col-lg-9">
-                                <h2></h2>
-                                <div class="panel panel-warning">
-
-                                    <div class="panel-heading">
-                                        Seleccione materia a eliminar
-                                    </div>
-                                    <div class="panel-body">
-                                        <div class=" form-group">
-                                            <label for="listaMateria" class="control-label">Seleccione la materia a modificar</label>
-                                            <select class="form-control" id="listaMateria">
-                                                <option id="materia1">Materia 1</option>
-                                                <option id="materiaN">Materia i</option>
-
-
-                                            </select>
-                                        </div>
-
-                                        <div class=" form-group col-md-offset-3">
-                                            <button type="submit" id="btn-cancel-registrarMateria" class="btn btn-outline btn-default">Cancelar</button>
-                                            <button type="submit" id="btn-registrarMateria" class="btn btn-outline btn-danger">Eliminar</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <h2></h2>
-
-                            </div>
-                        </div> 
-
-
-                    </div>
-
                 </div>
-                
-
-
-
             </div>
             <!-- /.container-fluid -->
         </div>

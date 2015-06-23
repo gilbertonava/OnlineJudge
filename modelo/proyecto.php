@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Description of gestionProyectos
+ * Description for gestionProyectos
  * Clase para la manipulacion del contenido con los proyectos
  * desde hacer el listado de los proyectos disponibles, 
  * edicion, carga y eliminacion de los mismos
@@ -39,7 +39,6 @@ class GestionProyecto {
         /**
          * Todo
          * GET use id, who is creting project
-         * Create projects directory where projects files will be hosted
          */
         //here we should get the session user id
         $idDocente = 2;
