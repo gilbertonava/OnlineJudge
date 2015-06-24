@@ -132,7 +132,7 @@
                 <div class="form-group" >
                     <button type="button" id="cancel_enviarExamen" class="btn btn-outline btn-default">Cancelar</button>
                     <button type="button" id="enviarExamen" class="btn btn-outline btn-primary" 
-                            onclick="window.open('ResultadoProyecto -josuuse.html', '_self', 'false');" >Enviar Proyecto</button>
+                            onclick="window.open('resultado_eval_Proyecto.php', '_self', 'false');" >Enviar Proyecto</button>
                 </div>
                
 

@@ -82,7 +82,7 @@
                                 </li>
 
                                 <li>
-                                    <a href="../examenes/gestionarExamenes.html">Examenes</a>
+                                    <a href="../examenes/gestionarExamenes.php">Examenes</a>
                                 </li>
 
                                 <li>

@@ -288,12 +288,6 @@ if (isset($_SESSION['examenActualizado'])) {
                                                                                 <i class="glyphicon glyphicon-remove"></i>
                                                                             </button>
 
-
-
-
-                                                                            <!--<button class="btn btn-sm btn-danger" id="delete" data-toggle="modal" data-target="#myModal">
-                                                                                <i class="glyphicon glyphicon-remove"></i>
-                                                                            </button>-->
                                                                         </div>
 
                                                                     </form>

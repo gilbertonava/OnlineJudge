@@ -145,7 +145,7 @@ session_start();
 				<div class="form-group col-md-4 text-left">
 
                                 <button class="btn  btn-outline btn-primary" id="delete" 
-                                        onclick="window.open('EnviarProyecto-josue.html', '_self', 'false')">Enviar Solución</button>
+                                        onclick="window.open('enviarProyecto.php', '_self', 'false')">Enviar Solución</button>
                             
                 </div>
                     <div class="row text-right col-md-6">

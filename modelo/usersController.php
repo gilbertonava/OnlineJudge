@@ -25,11 +25,17 @@ class usersController {
         
     }
     
-    public function listarUsuarios($param) {
-        $query="SELECT nombre,paterno,materno,idUsuario";
+    public function listarUsuarios() {
+        $query="SELECT nombre,paterno,materno,idUsuario FROM usuarios WHERE estado='ACTIVO'";
         
          return $this->con->executeSelectQuery($query,'');
         
+    }
+    public function tipoAlumno() {
+        
+        $query="SELECT alumno.idUsuario as student FROM alumno";
+        
+         return $this->con->executeSelectQuery($query,'');
     }
     
 }
