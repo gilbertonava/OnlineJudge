@@ -118,11 +118,11 @@ if ($row == NULL) {
                                     </li>
 
                                     <li>
-                                        <a href="../materias/listarMateria_merce.html">Materias</a>
+                                        <a href="../materias/listarMaterias.php">Materias</a>
                                     </li>
 
                                     <li>
-                                        <a href="../usuarios/GestionarUsuario-joosuse.html">Usuarios</a>
+                                        <a href="../usuarios/GestionarUsuarios.php">Usuarios</a>
                                     </li>
                                     <li>
                                         <a href="../usuarios/login.html">Login</a>
@@ -231,33 +231,7 @@ if ($row == NULL) {
 
                                         <?php
                                     }
-                                    /*
-                                      $file_name=  explode("_@_@_",$row['rutaProyecto']);
-
-                                      echo '<pre>';
-                                      print_r($file_name);
-                                      echo '</pre>';
-                                      if(@$_POST['btn-registrarProyecto']){
-
-                                      echo '<pre>';
-                                      print_r($_POST);
-                                      echo '</pre>';
-
-                                      if($_POST['nombreProyecto']!=$row['nombreProyecto']||$_POST['complejidad']!=$row['complejidad']
-                                      ||$_POST['estadoProyecto']!=$row['estado']){
-                                      if($_POST['rutaProyecto']!=''){
-                                      #$_POST['rutaProyecto']!=$file_name[1]
-
-                                      header('Location:../../modelo/actualizar_proyecto.php');}
-                                      else{
-                                      echo ' <div class="alert alert-warning alert-dismissable">
-                                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-                                      No hay cambios por guardar ! <br>                            </div>';
-                                      }
-                                      }
-                                      }
-
-                                     */
+                                    
                                     ?>
 
 

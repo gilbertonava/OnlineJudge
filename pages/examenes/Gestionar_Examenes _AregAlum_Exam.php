@@ -143,11 +143,11 @@ if (isset($_POST['idexamen'])) {
                                     </li>
 
                                     <li>
-                                        <a href="../materias/listarMateria_merce.php">Materias</a>
+                                        <a href="../materias/listarMaterias.php">Materias</a>
                                     </li>
 
                                     <li>
-                                        <a href="../usuarios/GestionarUsuario-joosuse.php">Usuarios</a>
+                                        <a href="../usuarios/GestionarUsuarios.php">Usuarios</a>
                                     </li>
                                     <li>
                                         <a href="../usuarios/login.php">Login</a>
@@ -301,7 +301,7 @@ if (isset($_POST['idexamen'])) {
 
                                             $alumnosIds = filter_input(INPUT_POST, 'seleccion', FILTER_DEFAULT, FILTER_REQUIRE_ARRAY);
 
-                                            print_r($alumnosIds);
+                                            //print_r($alumnosIds);
                                             if (!is_null($alumnosIds)) {
                                                 $addAlumnos = new gestionExamenes();
                                                 $addAlumnos->anadirAlumnosExamen($_POST);

@@ -384,3 +384,95 @@
 2015-06-23 04:54:25 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 156
 2015-06-23 04:54:25 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 157
 2015-06-23 04:54:25 (CEST)      Undefined variable: value C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _vizualizar.php 158
+2015-06-23 06:10:41 (CEST)      Undefined variable: conex C:\wamp\www\OnlineJudge\modelo\materiaController.php 31
+2015-06-23 06:14:32 (CEST)      Undefined variable: conex C:\wamp\www\OnlineJudge\modelo\materiaController.php 38
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 264
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 265
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 266
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 264
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 265
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 266
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 264
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 265
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 266
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 264
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 265
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 266
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 264
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 265
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 266
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 264
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 265
+2015-06-23 06:30:13 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 266
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 264
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 265
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 266
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 264
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 265
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 266
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 264
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 265
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 266
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 264
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 265
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 266
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 264
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 265
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 266
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 264
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 265
+2015-06-23 06:30:21 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 266
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 281
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 282
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 283
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 281
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 282
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 283
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 281
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 282
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 283
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 281
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 282
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 283
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 281
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 282
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 283
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 281
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 282
+2015-06-23 06:32:33 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\materias\listarMateria_merce.php 283
+2015-06-23 19:42:49 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\crearMateria_merce.php 191
+2015-06-23 20:35:37 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\crearMateria_merce.php 191
+2015-06-23 23:48:41 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 14
+2015-06-23 23:48:44 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 14
+2015-06-23 23:48:48 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 14
+2015-06-23 23:48:48 (CEST)      Undefined index: materiaName C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 142
+2015-06-23 23:48:48 (CEST)      Undefined index: materiaName C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 176
+2015-06-23 23:48:48 (CEST)      Undefined index: editarMateria C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 186
+2015-06-23 23:49:43 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 14
+2015-06-23 23:49:58 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 14
+2015-06-23 23:49:58 (CEST)      Undefined index: materiaName C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 142
+2015-06-23 23:49:58 (CEST)      Undefined index: materiaName C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 176
+2015-06-23 23:49:58 (CEST)      Undefined index: editarMateria C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 186
+2015-06-23 23:49:59 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 206
+2015-06-23 23:51:57 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 14
+2015-06-23 23:52:01 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 14
+2015-06-23 23:52:08 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 14
+2015-06-23 23:52:08 (CEST)      Undefined index: materiaName C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 142
+2015-06-23 23:52:08 (CEST)      Undefined index: materiaName C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 176
+2015-06-23 23:52:08 (CEST)      Undefined index: editarMateria C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 186
+2015-06-24 02:42:15 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 14
+2015-06-24 02:42:17 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 14
+2015-06-24 02:42:25 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 14
+2015-06-24 02:42:25 (CEST)      Undefined index: materiaName C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 142
+2015-06-24 02:42:25 (CEST)      Undefined index: materiaName C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 176
+2015-06-24 02:42:25 (CEST)      Undefined index: editarMateria C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 186
+2015-06-24 02:43:42 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 14
+2015-06-24 02:43:45 (CEST)      A session had already been started - ignoring session_start() C:\wamp\www\OnlineJudge\pages\materias\gestionMaterias_modificar.php 14
+2015-06-24 03:16:41 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 58
+2015-06-24 03:16:41 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 235
+2015-06-24 04:05:35 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 58
+2015-06-24 04:05:35 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 235
+2015-06-24 04:05:49 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 58
+2015-06-24 04:05:49 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 235
+2015-06-24 04:40:35 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 58
+2015-06-24 04:40:35 (CEST)      Undefined index: idexamen C:\wamp\www\OnlineJudge\pages\examenes\Gestionar_Examenes _AregAlum_Exam.php 235

@@ -135,11 +135,11 @@ if (isset($_SESSION['proyectoInsertado'])) {
                                     </li>
 
                                     <li>
-                                        <a href="../materias/listarMateria_merce.html">Materias</a>
+                                        <a href="../materias/listarMaterias.php">Materias</a>
                                     </li>
 
                                     <li>
-                                        <a href="../usuarios/GestionarUsuario-joosuse.html">Usuarios</a>
+                                        <a href="../usuarios/GestionarUsuarios.php">Usuarios</a>
                                     </li>
                                     <li>
                                         <a href="../usuarios/login.html">Login</a>
@@ -204,7 +204,7 @@ if (isset($_SESSION['proyectoInsertado'])) {
                                                     </div><br>
 
                                                     <div class="form-group  col-md-4">                                                        
-                                                        <a class="btn btn-primary btn-pinterest btn-outline" href="../materias/crearMateria_merce.html">Nueva Materia</a>                                                                                                               
+                                                        <a class="btn btn-primary btn-pinterest btn-outline" href="../materias/crearMateria.php">Nueva Materia</a>                                                                                                               
                                                     </div>
                                                 </div>
 
@@ -280,7 +280,7 @@ if (isset($_SESSION['proyectoInsertado'])) {
             $new_examen = new gestionExamenes();
 
             if ($new_examen->nuevoExamen($_POST)) {
-                echo '<pre>SE INSERTO</PRE>';
+                @header('Location:gestionarExamenes.php');
             }
         }
         }

@@ -1,6 +1,6 @@
 <?php
 include_once 'dbconnection.php';
-include'../../logs/errorLogging.php';
+//include'../../logs/errorLogging.php';
 //include_once '../../logs/errorLogging.php';
 
 class gestionExamenes {
@@ -178,9 +178,9 @@ class gestionExamenes {
             for ($index = 0; $index < count($alumnosIds); $index++) {
 
                 $add = 'INSERT INTO alumno_has_examen VALUES( '.$alumnosIds[$index].' , '.$POST['idexamen'].' );';
-                             
+                try{
                 $file =$con->executeQuery($add, ' ');
-          
+                }  catch (RuntimeException $e){}
             }
         }
     }

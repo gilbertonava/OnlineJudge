@@ -1,14 +1,21 @@
 <?php
+include '../../modelo/materiaController.php';
 include '../../logs/errorLogging.php';
-//throw new RuntimeException ('hhjdf');
-session_start();
 
-if (!empty($_POST)) {
-    $ruta = '../../_Examenes/' . $_POST['visualizar'] . '.pdf';
-    $nombre = $_POST['nombreProblema'];
-} else {
-    header('Location:../../pages/gestionarExamenes.php');
-    exit();
+session_start();
+if (isset($_SESSION['materiaCreada'])) {
+
+    unset($_SESSION['materiaCreada']);
+    header('Location:listarMaterias.php');
+}
+
+
+//obtener el id del docente q registra la materia
+if (isset($_SESSION['docente'])) {
+    $idDocente = $_SESSION['docente'];
+} else {//provisional en esta fase;; esto no debe de existtir
+    $idDocente = 1; //para mi utilidad 
+    //-- regitralo previamente en la bd para q lopuedas usar
 }
 ?>
 
@@ -45,6 +52,7 @@ if (!empty($_POST)) {
         <![endif]-->
 
     </head>
+
     <body>
 
         <div id="wrapper">
@@ -58,7 +66,7 @@ if (!empty($_POST)) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"> Juez en Linea ITSMante </a>
+                    <a class="navbar-brand" href="../pages/index.html">  </a>
                 </div>
                 <!-- /.navbar-header -->
 
@@ -74,7 +82,7 @@ if (!empty($_POST)) {
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="../pages/usuarios/login.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li><a href="../usuarios/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
                         </ul>
                         <!-- /.dropdown-user -->
@@ -86,39 +94,29 @@ if (!empty($_POST)) {
                 <div class="navbar-default sidebar" role="navigation">
                     <div class="sidebar-nav navbar-collapse">
                         <ul class="nav" id="side-menu">
-                            <li class="sidebar-search">
-                                <div class="input-group custom-search-form">
-                                    <input type="text" class="form-control" placeholder="Search...">
-                                    <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button">
-                                            <i class="fa fa-search"></i>
-                                        </button>
-                                    </span>
-                                </div>
-                                <!-- /input-group -->
-                            </li>
 
-                            <li class="active">
-                                <a href="#"><i class="fa fa-files-o fa-fw"></i> Panel de Control<span class="fa arrow"></span></a>
+                            <li>
+                                <a href="#"><i class="fa fa-files-o fa-fw"></i>Panel de Control<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
                                     <li>
-                                        <a href="../pages/problemas/listar_proyecto.php">Proyectos</a>
+                                        <a href="../problemas/listar_proyecto.php">Proyectos</a>
                                     </li>
 
                                     <li>
-                                        <a href="../pages/examenes/gestionarExamenes.php">Examenes</a>
+                                        <a href="../examenes/gestionarExamenes.php">Examenes</a>
                                     </li>
 
                                     <li>
-                                        <a href="../pages/materias/listarMaterias.php">Materias</a>
+                                        <a href="../materias/listarMaterias.php">Materias</a>
                                     </li>
 
                                     <li>
-                                        <a href="../pages/usuarios/GestionarUsuarios.php">Usuarios</a>
+                                        <a href="../usuarios/GestionarUsuarios.php">Usuarios</a>
                                     </li>
                                     <li>
-                                        <a href="../pages/usuarios/login.php">Login</a>
+                                        <a href="../usuarios/login.html">Login</a>
                                     </li>
+
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
@@ -129,57 +127,79 @@ if (!empty($_POST)) {
                 <!-- /.navbar-static-side -->
             </nav>
 
-            <!-- Page Content -->
+
             <div id="page-wrapper">
                 <div class="container-fluid">
-
                     <div class="row">
                         <div class="col-md-4 col-lg-12">
-                            <h1 class="page-header"><?php echo $nombre; ?></h1>
+                            <h1 class="page-header">Nueva Materia</h1>
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
                     <!-- /.row -->
 
-                    <div class="row">
 
-                        <div class="form-group col-md-4 text-left">
+                    <div class="col-md-6 col-lg-9">
 
-                            <button class="btn  btn-outline btn-primary" id="delete" 
-                                    onclick="window.open('enviarExamen.php', '_self', 'false')">Enviar Solución</button>
-
-                        </div>
-                        <div class="row text-right col-md-6">
+                        <div class="row text-right">
                             <div class="btn-group">
                                 <div class="btn-group" role="group">
-                                                                      
-                                    <button class="btn btn-sm btn-circle btn-pinterest btn-success col-md-offset-2" 
-                                            id="return" onclick="window.open('gestionarExamenes.php', '_self', 'false')">
+                                    <button class="btn btn-sm btn-circle btn-pinterest btn-success 
+                                            col-md-offset-2" id="return" onclick="window.open('listarMaterias.php', '_self', 'false')">
                                         <i class="fa fa-arrow-circle-left"></i>
                                     </button>
                                 </div>
                             </div>
-                        </div> 
-                    </div>
+                        </div >
 
-                    <div class="row">
-                        <div class="col-md-6 col-lg-9">
 
-                            <h2></h2>
-                            <div id="portapdf"> 
-                                <center>
-                                    <object data="<?php echo $ruta; ?>" type="application/pdf" width="800" height="900">
-                                    </object> </center>
-                            </div> 
-                            <h2></h2>
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Proporcione los datos de la materia</div>
+                            <div class="panel-body">
+                                <form role="form" action="" method="POST">
+                                    <div class="form-group">
+                                        <label class="control-label" for="nombreMateria">Nombre de la materia</label>
+                                        <input type="text" class="form-control" id="nombreMateria" name="nombre" placeholder="Materia" required>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label" for="nombreCreditos">Numero de creditos</label>
+                                        <input type="number" class="form-control" id="numeroCreditos" name="creditos" placeholder="Creditos" required min="0">
+                                    </div>
+
+
+
+                                    <div class=" form-group col-md-offset-3">
+                                        <input type="hidden" name="docente" value="<?php echo $idDocente; ?>"
+                                               <button type="submit" id="btn-cancel-registrarMateria" class="btn btn-outline btn-default">Cancelar</button>
+                                        <button type="submit" id="btn-registrarMateria" name="send" value="send" class="btn btn-outline btn-primary">Registrar</button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                </div> 
+                </div>
+                <!-- /.container-fluid -->
             </div>
-            <!-- /.container-fluid -->
-        </div>
-        <!-- /#page-wrapper -->
 
+<?php
+if (!empty($_POST)) {
+    if (isset($_POST['send'])) {
+        $new_materia = new materiaController();
+
+        if ($new_materia->registrarMateria($_POST)) {
+            session_start();
+            $_SESSION['materiaCreada'] = true;
+          
+        }
+    }
+}
+?>
+
+
+            <!-- /#page-wrapper -->
+
+        </div>
         <!-- /#wrapper -->
 
         <!-- jQuery -->
@@ -192,31 +212,8 @@ if (!empty($_POST)) {
         <script src="../../static/metisMenu/dist/metisMenu.min.js"></script>
 
         <!-- Custom Theme JavaScript -->
-
-        <!-- DataTables JavaScript -->
-        <script src="../../static/DATA_TABLES/datatables/media/js/jquery.dataTables.min.js"></script>
-        <script src="../../static/DATA_TABLES/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
-
-
-
-
-        <!-- Custom Theme JavaScript -->
         <script src="../../static/js/sb-admin-2.js"></script>
 
-        <!-- Page-Level Demo Scripts - Tables - Use for reference -->
-        <script>
-                                                $(document).ready(function() {
-                                                    $('#dataTables-example').DataTable({
-                                                        responsive: true
-                                                    });
-                                                });
-        </script>
-
-
-
     </body>
-
-
-
 
 </html>

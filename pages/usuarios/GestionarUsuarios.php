@@ -117,11 +117,11 @@
                                 </li>
 
                                 <li>
-                                    <a href="../materias/listarMateria_merce.html">Materias</a>
+                                    <a href="../materias/listarMaterias.php">Materias</a>
                                 </li>
 
                                 <li>
-                                    <a href="../usuarios/GestionarUsuario-joosuse.html">Usuarios</a>
+                                    <a href="../usuarios/GestionarUsuarios.php">Usuarios</a>
                                 </li>
                                 <li>
                                     <a href="../usuarios/login.html">Login</a>

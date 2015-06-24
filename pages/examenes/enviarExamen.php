@@ -85,11 +85,11 @@
                                 </li>
 
                                 <li>
-                                    <a href="../materias/listarMateria_merce.php">Materias</a>
+                                    <a href="../materias/listarMaterias.php">Materias</a>
                                 </li>
 
                                 <li>
-                                    <a href="../usuarios/GestionarUsuario-joosuse.php">Usuarios</a>
+                                    <a href="../usuarios/GestionarUsuarios.php">Usuarios</a>
                                 </li>
                                 <li>
                                     <a href="../usuarios/login.php">Login</a>

@@ -1,4 +1,29 @@
-﻿<!DOCTYPE html>
+<?php
+include '../../logs/errorLogging.php';
+include '../../modelo/materiaController.php';
+session_start();
+if (!empty($_POST)) {
+    if (!isset($_POST['editarMateria'])) {
+         @header('Location:./listarMaterias.php');
+    }
+}
+
+if (isset($_SESSION['materiaCreada'])) {
+
+    unset($_SESSION['materiaCreada']);
+    header('Location:listarMaterias.php');
+}
+
+
+//obtener el id del docente q registra la materia
+if (isset($_SESSION['docente'])) {
+    $idDocente = $_SESSION['docente'];
+} else {//provisional en esta fase;; esto no debe de existtir
+    $idDocente = 1; //para mi utilidad 
+    //-- regitralo previamente en la bd para q lopuedas usar
+}
+?>
+<!DOCTYPE html>
 <html lang="en">
 
     <head>
@@ -73,28 +98,28 @@
                 <div class="navbar-default sidebar" role="navigation">
                     <div class="sidebar-nav navbar-collapse">
                         <ul class="nav" id="side-menu">
-                            
+
                             <li class="active">
                                 <a href="#"><i class="fa fa-files-o fa-fw"></i> Panel de Control<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
-                                  <li>
-                                    <a href="../problemas/listar_proyecto.php">Proyectos</a>
-                                </li>
+                                    <li>
+                                        <a href="../problemas/listar_proyecto.php">Proyectos</a>
+                                    </li>
 
-                                <li>
-                                    <a href="../examenes/gestionarExamenes.html">Examenes</a>
-                                </li>
+                                    <li>
+                                        <a href="../examenes/gestionarExamenes.php">Examenes</a>
+                                    </li>
 
-                                <li>
-                                    <a href="../materias/listarMateria_merce.html">Materias</a>
-                                </li>
+                                    <li>
+                                        <a href="../materias/listarMaterias.php">Materias</a>
+                                    </li>
 
-                                <li>
-                                    <a href="../usuarios/GestionarUsuario-joosuse.html">Usuarios</a>
-                                </li>
-                                <li>
-                                    <a href="../usuarios/login.html">Login</a>
-                                </li>
+                                    <li>
+                                        <a href="../usuarios/GestionarUsuarios.php">Usuarios</a>
+                                    </li>
+                                    <li>
+                                        <a href="../usuarios/login.html">Login</a>
+                                    </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
@@ -110,7 +135,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-4 col-lg-12">
-                            <h1 class="page-header">Editar Materias</h1>
+                            <h3 class="page-header"><?php echo 'Editando ' . $_POST['materiaName']; ?></h3>
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
@@ -125,7 +150,7 @@
                     <div class="btn-group">
                         <div class="btn-group" role="group">
                             <button class="btn btn-sm btn-circle btn-pinterest btn-success col-md-offset-2" 
-                                    id="return" onclick="window.open('listarMateria_merce.html', '_self', 'false')">
+                                    id="return" onclick="window.open('listarMaterias.php', '_self', 'false')">
                                 <i class="fa fa-arrow-circle-left"></i>
                             </button>
                         </div>
@@ -140,25 +165,24 @@
                             Cambie los datos necesarios
                         </div>
                         <div class="panel-body">
-                            <form role="form">
+                            <form role="form" action="" method="POST">
                                 <div class="form-group">
                                     <label class="control-label" for="nombreMateria">Nuevo nombre de la materia</label>
-                                    <input type="text" class="form-control" id="nombreMateria" placeholder="Materia" required>
+                                    <input type="text" class="form-control" name="nombre" placeholder="Materia" required
+                                           value="<?php echo $_POST['materiaName']; ?>">
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label" for="nombreCreditos">Nuevo número de creditos</label>
-                                    <input type="number" class="form-control" id="numeroCreditos" placeholder="Creditos" required min="0">
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="control-label" for="numeroSemestre">Semestre</label>
-                                    <input type="number" class="form-control" id="numeroSemestre" placeholder="Semestre" required min="0">
+                                    <input type="number" class="form-control" name="creditos" placeholder="Creditos" required min="0" max="25"
+                                           value="<?php echo $_POST['creditos']; ?>">
                                 </div>
 
                                 <div class=" form-group col-md-offset-3">
+                                    <input type="hidden" name="id" value="<?php echo $_POST['editarMateria']; ?>"/>
+                                    <input type="hidden" name="docente" value="<?php echo $idDocente; ?>"/>
                                     <button type="submit" id="btn-cancel-registrarMateria" class="btn btn-outline btn-default">Cancelar</button>
-                                    <button type="submit" id="btn-registrarMateria" class="btn btn-outline btn-primary">Cambiar</button>
+                                    <button type="submit" id="btn-registrarMateria" name="send" value="send" class="btn btn-outline btn-primary">Cambiar</button>
                                 </div>
 
                             </form>
@@ -168,6 +192,20 @@
                 <!-- /.container-fluid -->
             </div>
             <!-- /#page-wrapper -->
+
+            <?php
+            if (!empty($_POST)) {
+                if (isset($_POST['send'])) {
+                    $new_materia = new materiaController();
+
+                    if ($new_materia->actualizarMateria($_POST)) {
+                        //session_start();
+                        $_SESSION['materiaCreada'] = true;
+                    }
+                }
+            }
+            ?>
+
 
         </div>
         <!-- /#wrapper -->

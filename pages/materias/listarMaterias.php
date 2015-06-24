@@ -1,5 +1,6 @@
 <?php
-include '../../modelo/examencontroller.php';
+include '../../logs/errorLogging.php';      
+include '../../modelo/materiaController.php';
 session_start();
 $va = "null";
 if (isset($_SESSION['proyectoEliminado'])) {
@@ -60,6 +61,8 @@ if (isset($_SESSION['examenActualizado'])) {
     }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,13 +74,19 @@ if (isset($_SESSION['examenActualizado'])) {
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>SB Admin 2 - Bootstrap Admin Theme</title>
+        <title>Online Judge ITSMANTE</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
 
         <!-- MetisMenu CSS -->
         <link href="../../static/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+        <!-- DataTables CSS -->
+        <link href="../../static/DATA_TABLES/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+
+        <!-- DataTables Responsive CSS -->
+        <link href="../../static/DATA_TABLES/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
 
         <!-- Custom CSS -->
         <link href="../../static/css/sb-admin-2.css" rel="stylesheet">
@@ -95,7 +104,6 @@ if (isset($_SESSION['examenActualizado'])) {
     </head>
 
     <body>
-
         <!--Confirmation Dialog -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModal-label" aria-hidden="true">
             <div class="modal-dialog">
@@ -110,7 +118,7 @@ if (isset($_SESSION['examenActualizado'])) {
                     <div class="modal-footer">
                         <form role="form"id="fdelete" name="contact" class="contact" 
                               action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
-                            <input type="hidden" id="idTo" name="idTo" value="sinValor"/>
+                            <input type="hidden" id="idTo" name="idmateria" value="sinValor"/>
                         </form>
                         <button type="button" class="btn btn-pinterest btn-default " 
                                 data-dismiss="modal">Cancelar</button>
@@ -125,18 +133,13 @@ if (isset($_SESSION['examenActualizado'])) {
 
         <div id="alerta" class="alert alert-success alert-dismissable" style="display: none">
             <a class="close" onclick="$('.alert').hide();
-                    window.open('gestionarExamenes.php', '_self', 'false');">×</a>
+                    window.open('listarMaterias.php', '_self', 'false');">×</a>
             <strong>Eliminación</strong>
             <p id="menssage"></p>
         </div>
 
 
         <!-- end confirmation dialog-->
-
-
-
-
-
 
         <div id="wrapper">
 
@@ -149,7 +152,7 @@ if (isset($_SESSION['examenActualizado'])) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="../pages/index.html"> Juez en Linea ITSMante </a>
+
                 </div>
                 <!-- /.navbar-header -->
 
@@ -165,7 +168,7 @@ if (isset($_SESSION['examenActualizado'])) {
                             <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="../usuarios/pages/login.php"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            <li><a href="../usuarios/login.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
                             </li>
                         </ul>
                         <!-- /.dropdown-user -->
@@ -176,8 +179,7 @@ if (isset($_SESSION['examenActualizado'])) {
 
                 <div class="navbar-default sidebar" role="navigation">
                     <div class="sidebar-nav navbar-collapse">
-                        <ul class="nav" id="side-menu">
-
+                        <ul class="nav" id="side-menu">                                            
                             <li class="active">
                                 <a href="#"><i class="fa fa-files-o fa-fw"></i> Panel de Control<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
@@ -197,7 +199,7 @@ if (isset($_SESSION['examenActualizado'])) {
                                         <a href="../usuarios/GestionarUsuarios.php">Usuarios</a>
                                     </li>
                                     <li>
-                                        <a href="../usuarios/loginphp">Login</a>
+                                        <a href="../usuarios/login.html">Login</a>
                                     </li>
                                 </ul>
                                 <!-- /.nav-second-level -->
@@ -209,145 +211,116 @@ if (isset($_SESSION['examenActualizado'])) {
                 <!-- /.navbar-static-side -->
             </nav>
 
-            <!-- Page Content -->
             <div id="page-wrapper">
-
-
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Examenes disponibles</h1>
-
+                        <h1 class="page-header">Materia</h1>
                     </div>
-
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- /.row -->
-
                 <div class="row">
-
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
+                                Materias Disponibles                          
                                 <div class="form-group text-right">
-                                    <button class="btn  btn-outline btn-primary" 
-                                            id="delete" onclick="window.open('Gestionar_Examenes _registrar.php', '_self', 'false')"> Nuevo</button>
+
+                                    <button  type="button" class="btn btn-success"  
+                                             onClick=" window.location.href = 'crearMateria.php'">Registrar Nuevo</button>   
                                 </div>
                             </div>
                             <!-- /.panel-heading -->
                             <div class="panel-body">
                                 <div class="dataTable_wrapper">
-                                    <table class="table table-striped table-bordered table-hover"
-                                           id="dataTables-example">
+                                    <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                         <thead>
                                             <tr>
-                                                <th>Examenes</th>
-                                                <th>Unidad</th>
+                                                <th>Materia</th>
+    <!--                                            <th>Semestre</th>-->
+                                                <th>Creditos</th>
                                                 <th>Opciones</th>
+
+
+
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <?php
-                                            try {
+                                            //Todo establecer $idDocente POR EL ID CORRESPONDIENTE 
+                                            //A LA SESSION DEL PROFESOR PARA OBTENER SOLO LAS MATERIAS DE EL.
+                                            $idDocente = 1;
 
-                                                $listarexamenes = new gestionExamenes();
-                                                $examenes = $listarexamenes->listarExamenes();
+                                            $materias = new materiaController();
+                                            $materia_ARRAY = $materias->listarMaterias($idDocente);
 
-                                                foreach ($examenes as $value) {
-                                                    if (isset($value['idexamen'])) {
-                                                        ?> 
-
-                                                        <tr>
-                                                            <td><?php echo $value['nombre']; ?></td>
-                                                            <td><?php echo $value['unidad']; ?></td>
-                                                            <td>                                                                
-                                                                <div class="toolbar text-center" role="toolbar">
+                                            foreach ($materia_ARRAY as $value) {
+                                                if (isset($value['idmateria'])) {
+                                                    ?> 
 
 
-                                                                    <form role="form" class="form-inline col-md-2"  method="POST" action="Gestionar_Examenes _vizualizar.php">
+                                                    <tr class="odd gradeA">
+                                                        <td><b><?php echo $value['nombre']; ?></b></td>
 
-                                                                        <div class="btn-group" role="group" onclick="window.open('Gestionar_Examenes _vizualizar.php', '_self', 'false')">
-                                                                            <input type="hidden" id="np" name="nombreProblema" value="<?php echo $value['nombre']; ?>">
-                                                                            <button type="submit"class="btn btn-sm btn-primary " name="visualizar"id="vizualizar" value="<?php echo $value['rutaArchivo']; ?>">
-                                                                                <i class="glyphicon fa fa-file-o"></i>
-                                                                            </button>
-                                                                        </div>
+                                                        <td class="text-center"><b><?php echo $value['creditos']; ?></b></td>
 
+                                                        <td class="text-center">
+                                                            <div class="toolbar text-center" role="toolbar">
+
+                                                                <div class="btn-group" role="group">
+                                                                    <form action="gestionMaterias_modificar.php" method="post">
+                                                                        <input type="hidden" name="materiaName" value="<?php echo $value['nombre']; ?>"/>
+                                                                        <input type="hidden" name="creditos" value="<?php echo $value['creditos']; ?>"/>
+                                                                        <button class="btn btn-sm btn-primary col-md-offset-2" id="editar" name="editarMateria" value='<?php echo $value['idmateria']; ?>'
+                                                                                style="padding-right:10px"><i class="glyphicon glyphicon-edit" 
+                                                                                                      onClick=" window.location.href = 'gestionMaterias_modificar.php'">
+
+                                                                            </i></button>
                                                                     </form>
-
-
-
-                                                                    <form role="form" class="form-inline col-md-2"  method="POST" action="Gestionar_Examenes _AregAlum_Exam.php">
-                                                                        <div class="btn-group" role="group" onclick="window.open('Gestionar_Examenes _AregAlum_Exam.php', '_self', 'false')">
-                                                                            <input type="hidden" id="idexamen" name="idexamen" value="<?php echo $value['idexamen']; ?>">
-                                                                            <input type="hidden" id="materia" name="materia" value="<?php echo $value['nombre']; ?>">
-                                                                            <input type="hidden" id="unidad" name="unidad" value="<?php echo $value['unidad']; ?>">
-                                                                            <button class="btn btn-sm btn-primary " id="agregar_alumnos" type="submit">
-                                                                                <i class="glyphicon fa fa-user"></i>
-                                                                            </button>
-                                                                        </div>
-
-                                                                    </form>
-
-
-
-                                                                    <form role="form" class="form-inline col-md-2"  method="POST" action="Gestionar_Examenes _modificar.php">
-                                                                        
-                                                                        <input type="hidden" name="idmateria" value="<?php echo $value['idMateria']; ?>"
-                                                                             
-                                                                        <div class="btn-group" role="group" >
-                                                                            <button type="submit" class="btn btn-sm btn-primary" name="editar"
-                                                                                    value="<?php echo $value['idexamen']; ?>"
-                                                                                    onclick="window.open('Gestionar_Examenes _modificar.php', '_self', 'false')">
-                                                                                <i class="glyphicon glyphicon-edit"></i>
-                                                                            </button>
-                                                                        </div>
-                                                                    </form>                                                                   
-
+                                                                </div>
+                                                                <div class="btn-group" role="group">
                                                                     <form role="form" class="form-inline col-md-2"  method="POST" action="">
                                                                         <div class="btn-group" role="group">
-                                                                            <button  type="button" class="btn btn-sm btn-danger"  value="<?php echo ' ' . $value['idexamen']; ?>" 
-                                                                                     id="btn_delete_<?php echo $value['idexamen']; ?>" name="elimiar_pro"
-                                                                                     onclick="$('#idTo').val($('#btn_delete_<?php echo $value['idexamen']; ?>').attr('value'));
-                                                                                             $('#myModal').modal('show');">
+                                                                            <button  type="button" class="btn btn-sm btn-danger"  value="<?php echo ' ' . $value['idmateria']; ?>" 
+                                                                                     id="btn_delete_<?php echo $value['idmateria']; ?>" name="elimiar_pro"
+                                                                                     onclick="$('#idTo').val($('#btn_delete_<?php echo $value['idmateria']; ?>').attr('value'));
+                                                                                                     $('#myModal').modal('show');">
                                                                                 <i class="glyphicon glyphicon-remove"></i>
                                                                             </button>
 
+
+
+
+                                                                            <!--<button class="btn btn-sm btn-danger" id="delete" data-toggle="modal" data-target="#myModal">
+                                                                                <i class="glyphicon glyphicon-remove"></i>
+                                                                            </button>-->
                                                                         </div>
 
                                                                     </form>
-
-
                                                                 </div>
-                                                            </td>
-                                                        </tr>
-                                                    <?php }
-                                                } ?>
+                                                        </td>
+                                                    </tr>
+                                                <?php }
+                                            }
+                                            ?>
 
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!-- /.table-responsive -->
-
+                                        </tbody>
+                                    </table>
                                 </div>
-                                <!-- /.panel-body -->
+                                <!-- /.table-responsive -->
+
                             </div>
-                            <!-- /.panel -->
+                            <!-- /.panel-body -->
                         </div>
-                        <!-- /.col-lg-12 -->
+                        <!-- /.panel -->
                     </div>
-
-                </div> <!-- termina lo de la pestaña agregar examen-->
-
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
             </div>
+            <!-- /#page-wrapper -->
 
-            <?php
-        } catch (RuntimeException $r) {
-            
-        }
-        ?>
-
-
-        <!-- /#page-wrapper -->
+        </div>
         <!-- /#wrapper -->
 
         <!-- jQuery -->
@@ -359,40 +332,36 @@ if (isset($_SESSION['examenActualizado'])) {
         <!-- Metis Menu Plugin JavaScript -->
         <script src="../../static/metisMenu/dist/metisMenu.min.js"></script>
 
-        <!-- Custom Theme JavaScript -->
-
         <!-- DataTables JavaScript -->
         <script src="../../static/DATA_TABLES/datatables/media/js/jquery.dataTables.min.js"></script>
         <script src="../../static/DATA_TABLES/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
-        
-
 
         <!-- Custom Theme JavaScript -->
         <script src="../../static/js/sb-admin-2.js"></script>
 
         <!-- Page-Level Demo Scripts - Tables - Use for reference -->
         <script>
-                                                                             $(document).ready(function() {
-                                                                                 $('#dataTables-example').DataTable({
-                                                                                     responsive: true
-                                                                                 });
-                                                                             });
-        </script>      
+                                                                                         $(document).ready(function () {
+                                                                                             $('#dataTables-example').DataTable({
+                                                                                                 responsive: true
+                                                                                             });
+                                                                                         });
+        </script>
         <script>
             //eliminar (1) un proyecto seleccionado al confirmar el modal de eliminacion
-            $(document).ready(function() {
-                $("button#delete_proyecto").click(function() {
+            $(document).ready(function () {
+                $("button#delete_proyecto").click(function () {
                     $.ajax({
                         type: "POST",
-                        url: "../../modelo/eliminar_examen.php", //process to mail
+                        url: "../../modelo/eliminar_materia.php", //process to mail
                         data: $('form.contact').serialize(),
-                        success: function(msg) {
+                        success: function (msg) {
                             $("#menssage").html(msg);
                             $("#myModal").modal('hide'); //hide popup
                             //$('#menssage').attr("class"," alert-success alert-dismissable ");
                             $('.alert').show();
                         },
-                        error: function() {
+                        error: function () {
                             $("#menssage").html("No se pudo eliminar el examen seleccionado");
                             $('#menssage').attr("class", " alert-danger ");
                             $('.alert').show();
@@ -401,7 +370,6 @@ if (isset($_SESSION['examenActualizado'])) {
                 });
             });
         </script>
-
-
     </body>
+
 </html>
